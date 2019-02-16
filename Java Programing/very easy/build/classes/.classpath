@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="Data structure/GraphAdjacencyList/src/|prime.java/src/|array.java/src/|car 11715/src/|Data structure/11340 - Newspaper/src/|Data structure/11995 – I Can Guess the Data Structure!/src/|Threadexample/src/|Data structure/12503 - Robot Instructions/src/|Data structure/10295 - Hay Points/src/|Return  objects/src/|483-word scramble/src/|575 skew binary/src/|Data structure/Exceptionexample/src/|JavaApplication46/src/|Inheritance/src/|Returning objects/src/|JavaApplication9/src/|Data structure/Broken Keyboard (a.k.a. Beiju Text)/src/|10106 - Product/src/|Data structure/11942 - Lumberjack Sequencing/src/|Data structure/ConstructorCall1/src/|Data structure/11917 - Do Your Own Homework/src/|12250 Language/src/|Data structure/10954 Add All/src/|12289 One-Two-Three/src/|Data structure/10050 - Hartals/src/|constructor.java/src/|Calculator1/src/|QK/ConnectionTest/src/|10212/src/|Data structure/ArrayListExample/src/|Data structure/Gridbaglayout/src/|Multithreading/src/|Data structure/Iterator/src/|Data structure/Interfaceexample/src/|10929/src/|Stackclass/src/|Data structure/11764 - Jumping Mario/src/|Data structure/test/src/|11715/src/|String trim/src/|Power of  cryphtography 113/src/|Data structure/Methodoverwriting/src/|CCCC/src/|Swing/src/|very easy1/src/|11713 Abstract Names/src/|Data structure/Methodoverloading/src/|Fibonacci/src/fibonacci/|Hello world/src/|11461- Square Numbers/src/|11934/src/|Java 1/src/|10925-krakovia/src/|12250/src/|Data structure/10282 - Babelfish/src/|Data structure/String test/src/|10924/src/|575 -skew binary/src/|cse/Lab2/src/|Very easy 10523/src/|424-Integer Inquery/src/|Data structure/10815 - Andy&apos;s First Dictionary/src/|Suvonkarcalculator/src/suvonkarcalculator/|Calling fib number.java/src/|Demojdbc/src/| 11879 Multiple of 17/src/|JavaApplication32/src/|Data structure/List/src/|Data structure/12049 - Just Prune The List/src/|Data structure/484 - The Department of Redundancy Department/src/|575ary/src/|492 - Pig-Latin/src/|cola 11150/src/|cse/Lab/src/|exmple/src/|Data structure/Exceptionthrowingexample/src/|very easy/src/|language/src/|Data structure/Queue/src/|Calender/src/|Nesting For.java/src/|Loop.java/src/|Data structure/A. SwapSort/src/|swapping.java/src/|Data structure/set/src/|Data structure/Staticproject/src/|12289/src/|The Decoder/src/|JavaApplication24/src/|458-the decoder/src/|Data structure/11559 - Event Planning/src/|Save setu/src/|Data structure/Abstractclass/src/|Data structure/priorityqueue/src/|inharitance.java/src/|11636 Hello World/src/|Data structure/Static/src/|Data structure/ 11541 - Decoding/src/|Data structure/A. Calculating Function/src/|Thread/src/|Data structure/Children’s Game/src/|cse/Fibonacci/src/fibonacci/|AcloserlockatArgumentpassing/src/|748- Exponentiation/src/|Thread priorities/src/|RunableExample/src/|Data structure/JavaApplication168/src/|Suvonkar/src/|JavaApplication17/src/|Q.k.DATABase/src/|calculator/src/calculator/|Java programming/src/|String charATand setcharAT/src/|12289 one -two-three/src/|Data structure/11541/src/|every easy1/src/|JavaApplication73/src/|Database conection with sql/src/|This is First Java Programming/src/|input.java/src/|11461 Square Numbers/src/|10106/src/|joption/src/|Data structure/10954 - Add All/src/|Data structure/11849 - CD/src/|374-Big Mod/src/|Javacalculator/src/|constructor1.java/src/|11287 pseudopriem numbers/src/|Data structure/10226/src/|Conting Oddnumber/src/|Data structure/Split method/src/|11854 egypt/src/|374/src/|JavaApplication27/src/| 1230/src/|Data structure/Gricbaglayout/src/|748 - Exponentiation/src/|Insert method/src/|Egypt 11854/src/|Data structure/HashMap/src/|11287  pseudoprime numbers/src/pkg11287/pseudoprime/numbers/|valueofmethod/src/|A change in thermal unit 11984/src/|hello.java/src/|cse/HumanFace/src/|Coustomexception/src/|10924 prime word/src/|String/src/|aaa.java/src/|world.java/src/|10424-love calculator/src/|Java/src/|575/src/|Nesting For Loop.Java/src/|Uradhura/src/|Helloworld.java/src/|623 500!/src/|fibonacce.java/src/|Database project/src/|Data structure/StringOparation/src/|11900  boild eggs/src/|Data structure/12015 - Google is Feeling Lucky/src/|Data structure/Natural sorting/src/|11417 GCD/src/|Data structure/10954 -Add All/src/|Data structure/Constructorcall/src/|therad1/src/|constructor 1/src/|Threadcreating/src/|495 - Fibonacci Freeze/src/|Keyboard/src/|Data structure/12372 - Packing for Holiday/src/|Modex 1230/src/|11854/src/|ArrayInput.java/src/|Data structure/11849CD/src/|11287/src/|Calculator.java/src/calculator/java/|cse/Lines/src/|11547 Automatic  Answer/src/|javalength.java/src/|APPlet/src/|1230 modex/src/|10071/src/|Data structure/11799 - Horror Dash/src/|Thread1/src/|Add all 10594/src/|Data structure/10107 - What is the Median/src/" kind="src" path=""/>
+	<classpathentry kind="src" path=" 11879 Multiple of 17/src"/>
+	<classpathentry kind="src" path=" 1230/src"/>
+	<classpathentry kind="src" path="10071/src"/>
+	<classpathentry kind="src" path="10106 - Product/src"/>
+	<classpathentry kind="src" path="10106/src"/>
+	<classpathentry kind="src" path="10212/src"/>
+	<classpathentry kind="src" path="10424-love calculator/src"/>
+	<classpathentry kind="src" path="10924 prime word/src"/>
+	<classpathentry kind="src" path="10924/src"/>
+	<classpathentry kind="src" path="10925-krakovia/src"/>
+	<classpathentry kind="src" path="10929/src"/>
+	<classpathentry kind="src" path="11287  pseudoprime numbers/src/pkg11287/pseudoprime/numbers"/>
+	<classpathentry kind="src" path="11287 pseudopriem numbers/src"/>
+	<classpathentry kind="src" path="11287/src"/>
+	<classpathentry kind="src" path="11417 GCD/src"/>
+	<classpathentry kind="src" path="11461 Square Numbers/src"/>
+	<classpathentry kind="src" path="11461- Square Numbers/src"/>
+	<classpathentry kind="src" path="11547 Automatic  Answer/src"/>
+	<classpathentry kind="src" path="11636 Hello World/src"/>
+	<classpathentry kind="src" path="11713 Abstract Names/src"/>
+	<classpathentry kind="src" path="11715/src"/>
+	<classpathentry kind="src" path="11854 egypt/src"/>
+	<classpathentry kind="src" path="11854/src"/>
+	<classpathentry kind="src" path="11900  boild eggs/src"/>
+	<classpathentry kind="src" path="11934/src"/>
+	<classpathentry kind="src" path="12250 Language/src"/>
+	<classpathentry kind="src" path="12250/src"/>
+	<classpathentry kind="src" path="12289 one -two-three/src"/>
+	<classpathentry kind="src" path="12289 One-Two-Three/src"/>
+	<classpathentry kind="src" path="12289/src"/>
+	<classpathentry kind="src" path="1230 modex/src"/>
+	<classpathentry kind="src" path="374-Big Mod/src"/>
+	<classpathentry kind="src" path="374/src"/>
+	<classpathentry kind="src" path="424-Integer Inquery/src"/>
+	<classpathentry kind="src" path="458-the decoder/src"/>
+	<classpathentry kind="src" path="483-word scramble/src"/>
+	<classpathentry kind="src" path="492 - Pig-Latin/src"/>
+	<classpathentry kind="src" path="495 - Fibonacci Freeze/src"/>
+	<classpathentry kind="src" path="575 -skew binary/src"/>
+	<classpathentry kind="src" path="575 skew binary/src"/>
+	<classpathentry kind="src" path="575/src"/>
+	<classpathentry kind="src" path="575ary/src"/>
+	<classpathentry kind="src" path="623 500!/src"/>
+	<classpathentry kind="src" path="748 - Exponentiation/src"/>
+	<classpathentry kind="src" path="748- Exponentiation/src"/>
+	<classpathentry kind="src" path="A change in thermal unit 11984/src"/>
+	<classpathentry kind="src" path="aaa.java/src"/>
+	<classpathentry kind="src" path="AcloserlockatArgumentpassing/src"/>
+	<classpathentry kind="src" path="Add all 10594/src"/>
+	<classpathentry kind="src" path="APPlet/src"/>
+	<classpathentry kind="src" path="array.java/src"/>
+	<classpathentry kind="src" path="ArrayInput.java/src"/>
+	<classpathentry kind="src" path="Calculator.java/src/calculator/java"/>
+	<classpathentry kind="src" path="calculator/src/calculator"/>
+	<classpathentry kind="src" path="Calculator1/src"/>
+	<classpathentry kind="src" path="Calender/src"/>
+	<classpathentry kind="src" path="Calling fib number.java/src"/>
+	<classpathentry kind="src" path="car 11715/src"/>
+	<classpathentry kind="src" path="CCCC/src"/>
+	<classpathentry kind="src" path="cola 11150/src"/>
+	<classpathentry kind="src" path="constructor 1/src"/>
+	<classpathentry kind="src" path="constructor.java/src"/>
+	<classpathentry kind="src" path="constructor1.java/src"/>
+	<classpathentry kind="src" path="Conting Oddnumber/src"/>
+	<classpathentry kind="src" path="Coustomexception/src"/>
+	<classpathentry kind="src" path="cse/Fibonacci/src/fibonacci"/>
+	<classpathentry kind="src" path="cse/HumanFace/src"/>
+	<classpathentry kind="src" path="cse/Lab/src"/>
+	<classpathentry kind="src" path="cse/Lab2/src"/>
+	<classpathentry kind="src" path="cse/Lines/src"/>
+	<classpathentry kind="src" path="Data structure/ 11541 - Decoding/src"/>
+	<classpathentry kind="src" path="Data structure/10050 - Hartals/src"/>
+	<classpathentry kind="src" path="Data structure/10107 - What is the Median/src"/>
+	<classpathentry kind="src" path="Data structure/10226/src"/>
+	<classpathentry kind="src" path="Data structure/10282 - Babelfish/src"/>
+	<classpathentry kind="src" path="Data structure/10295 - Hay Points/src"/>
+	<classpathentry kind="src" path="Data structure/10815 - Andy&apos;s First Dictionary/src"/>
+	<classpathentry kind="src" path="Data structure/10954 - Add All/src"/>
+	<classpathentry kind="src" path="Data structure/10954 -Add All/src"/>
+	<classpathentry kind="src" path="Data structure/10954 Add All/src"/>
+	<classpathentry kind="src" path="Data structure/11340 - Newspaper/src"/>
+	<classpathentry kind="src" path="Data structure/11541/src"/>
+	<classpathentry kind="src" path="Data structure/11559 - Event Planning/src"/>
+	<classpathentry kind="src" path="Data structure/11764 - Jumping Mario/src"/>
+	<classpathentry kind="src" path="Data structure/11799 - Horror Dash/src"/>
+	<classpathentry kind="src" path="Data structure/11849 - CD/src"/>
+	<classpathentry kind="src" path="Data structure/11849CD/src"/>
+	<classpathentry kind="src" path="Data structure/11917 - Do Your Own Homework/src"/>
+	<classpathentry kind="src" path="Data structure/11942 - Lumberjack Sequencing/src"/>
+	<classpathentry kind="src" path="Data structure/11995 – I Can Guess the Data Structure!/src"/>
+	<classpathentry kind="src" path="Data structure/12015 - Google is Feeling Lucky/src"/>
+	<classpathentry kind="src" path="Data structure/12049 - Just Prune The List/src"/>
+	<classpathentry kind="src" path="Data structure/12372 - Packing for Holiday/src"/>
+	<classpathentry kind="src" path="Data structure/12503 - Robot Instructions/src"/>
+	<classpathentry kind="src" path="Data structure/484 - The Department of Redundancy Department/src"/>
+	<classpathentry kind="src" path="Data structure/A. Calculating Function/src"/>
+	<classpathentry kind="src" path="Data structure/A. SwapSort/src"/>
+	<classpathentry kind="src" path="Data structure/Abstractclass/src"/>
+	<classpathentry kind="src" path="Data structure/ArrayListExample/src"/>
+	<classpathentry kind="src" path="Data structure/Broken Keyboard (a.k.a. Beiju Text)/src"/>
+	<classpathentry kind="src" path="Data structure/Children’s Game/src"/>
+	<classpathentry kind="src" path="Data structure/Constructorcall/src"/>
+	<classpathentry kind="src" path="Data structure/ConstructorCall1/src"/>
+	<classpathentry kind="src" path="Data structure/Exceptionexample/src"/>
+	<classpathentry kind="src" path="Data structure/Exceptionthrowingexample/src"/>
+	<classpathentry kind="src" path="Data structure/GraphAdjacencyList/src"/>
+	<classpathentry kind="src" path="Data structure/Gricbaglayout/src"/>
+	<classpathentry kind="src" path="Data structure/Gridbaglayout/src"/>
+	<classpathentry kind="src" path="Data structure/HashMap/src"/>
+	<classpathentry kind="src" path="Data structure/Interfaceexample/src"/>
+	<classpathentry kind="src" path="Data structure/Iterator/src"/>
+	<classpathentry kind="src" path="Data structure/JavaApplication168/src"/>
+	<classpathentry kind="src" path="Data structure/List/src"/>
+	<classpathentry kind="src" path="Data structure/Methodoverloading/src"/>
+	<classpathentry kind="src" path="Data structure/Methodoverwriting/src"/>
+	<classpathentry kind="src" path="Data structure/Natural sorting/src"/>
+	<classpathentry kind="src" path="Data structure/priorityqueue/src"/>
+	<classpathentry kind="src" path="Data structure/Queue/src"/>
+	<classpathentry kind="src" path="Data structure/set/src"/>
+	<classpathentry kind="src" path="Data structure/Split method/src"/>
+	<classpathentry kind="src" path="Data structure/Static/src"/>
+	<classpathentry kind="src" path="Data structure/Staticproject/src"/>
+	<classpathentry kind="src" path="Data structure/String test/src"/>
+	<classpathentry kind="src" path="Data structure/StringOparation/src"/>
+	<classpathentry kind="src" path="Data structure/test/src"/>
+	<classpathentry kind="src" path="Database conection with sql/src"/>
+	<classpathentry kind="src" path="Database project/src"/>
+	<classpathentry kind="src" path="Demojdbc/src"/>
+	<classpathentry kind="src" path="Egypt 11854/src"/>
+	<classpathentry kind="src" path="every easy1/src"/>
+	<classpathentry kind="src" path="exmple/src"/>
+	<classpathentry kind="src" path="fibonacce.java/src"/>
+	<classpathentry kind="src" path="Fibonacci/src/fibonacci"/>
+	<classpathentry kind="src" path="Hello world/src"/>
+	<classpathentry kind="src" path="hello.java/src"/>
+	<classpathentry kind="src" path="Helloworld.java/src"/>
+	<classpathentry kind="src" path="inharitance.java/src"/>
+	<classpathentry kind="src" path="Inheritance/src"/>
+	<classpathentry kind="src" path="input.java/src"/>
+	<classpathentry kind="src" path="Insert method/src"/>
+	<classpathentry kind="src" path="Java 1/src"/>
+	<classpathentry kind="src" path="Java programming/src"/>
+	<classpathentry kind="src" path="Java/src"/>
+	<classpathentry kind="src" path="JavaApplication17/src"/>
+	<classpathentry kind="src" path="JavaApplication24/src"/>
+	<classpathentry kind="src" path="JavaApplication27/src"/>
+	<classpathentry kind="src" path="JavaApplication32/src"/>
+	<classpathentry kind="src" path="JavaApplication46/src"/>
+	<classpathentry kind="src" path="JavaApplication73/src"/>
+	<classpathentry kind="src" path="JavaApplication9/src"/>
+	<classpathentry kind="src" path="Javacalculator/src"/>
+	<classpathentry kind="src" path="javalength.java/src"/>
+	<classpathentry kind="src" path="joption/src"/>
+	<classpathentry kind="src" path="Keyboard/src"/>
+	<classpathentry kind="src" path="language/src"/>
+	<classpathentry kind="src" path="Loop.java/src"/>
+	<classpathentry kind="src" path="Modex 1230/src"/>
+	<classpathentry kind="src" path="Multithreading/src"/>
+	<classpathentry kind="src" path="Nesting For Loop.Java/src"/>
+	<classpathentry kind="src" path="Nesting For.java/src"/>
+	<classpathentry kind="src" path="Power of  cryphtography 113/src"/>
+	<classpathentry kind="src" path="prime.java/src"/>
+	<classpathentry kind="src" path="Q.k.DATABase/src"/>
+	<classpathentry kind="src" path="QK/ConnectionTest/src"/>
+	<classpathentry kind="src" path="Return  objects/src"/>
+	<classpathentry kind="src" path="Returning objects/src"/>
+	<classpathentry kind="src" path="RunableExample/src"/>
+	<classpathentry kind="src" path="Save setu/src"/>
+	<classpathentry kind="src" path="Stackclass/src"/>
+	<classpathentry kind="src" path="String charATand setcharAT/src"/>
+	<classpathentry kind="src" path="String trim/src"/>
+	<classpathentry kind="src" path="String/src"/>
+	<classpathentry kind="src" path="Suvonkar/src"/>
+	<classpathentry kind="src" path="Suvonkarcalculator/src/suvonkarcalculator"/>
+	<classpathentry kind="src" path="swapping.java/src"/>
+	<classpathentry kind="src" path="Swing/src"/>
+	<classpathentry kind="src" path="The Decoder/src"/>
+	<classpathentry kind="src" path="therad1/src"/>
+	<classpathentry kind="src" path="This is First Java Programming/src"/>
+	<classpathentry kind="src" path="Thread priorities/src"/>
+	<classpathentry kind="src" path="Thread/src"/>
+	<classpathentry kind="src" path="Thread1/src"/>
+	<classpathentry kind="src" path="Threadcreating/src"/>
+	<classpathentry kind="src" path="Threadexample/src"/>
+	<classpathentry kind="src" path="Uradhura/src"/>
+	<classpathentry kind="src" path="valueofmethod/src"/>
+	<classpathentry kind="src" path="Very easy 10523/src"/>
+	<classpathentry kind="src" path="very easy/src"/>
+	<classpathentry kind="src" path="very easy1/src"/>
+	<classpathentry kind="src" path="world.java/src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="very easy/build/classes"/>
+</classpath>

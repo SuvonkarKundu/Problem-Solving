@@ -1,0 +1,1649 @@
+<!DOCTYPE html>
+<html class="" xmlns="http://www.w3.org/1999/xhtml" dir="ltr"><head><script src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/a_002.htm" async=""></script><script src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/count.txt" async=""></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="http://algorithms.tutorialhorizon.com/xmlrpc.php">
+	
+	<title>Binary Search Tree Complete Implementation in JAVA | Algorithms</title>
+<script src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/widgets.js" id="twitter-wjs"></script><script src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/ca-pub-1720129943462898.js"></script><script src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/analytics.js" async=""></script><script>document.documentElement.className = document.documentElement.className.replace("no-js","js");</script>
+<link rel="alternate" type="application/rss+xml" title="Algorithms » Feed" href="http://algorithms.tutorialhorizon.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Algorithms » Comments Feed" href="http://algorithms.tutorialhorizon.com/comments/feed/">
+<link href="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/css.css" rel="stylesheet" type="text/css">
+<link rel="alternate" type="application/rss+xml" title="Algorithms » Binary Search Tree Complete Implementation. Comments Feed" href="http://algorithms.tutorialhorizon.com/binary-search-tree-complete-implementation/feed/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/algorithms.tutorialhorizon.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.4.1"}};
+			!function(a,b,c){function d(a){var c,d=b.createElement("canvas"),e=d.getContext&&d.getContext("2d");return e&&e.fillText?(e.textBaseline="top",e.font="600 32px Arial","flag"===a?(e.fillText(String.fromCharCode(55356,56806,55356,56826),0,0),d.toDataURL().length>3e3):"diversity"===a?(e.fillText(String.fromCharCode(55356,57221),0,0),c=e.getImageData(16,16,1,1).data.toString(),e.fillText(String.fromCharCode(55356,57221,55356,57343),0,0),c!==e.getImageData(16,16,1,1).data.toString()):("simple"===a?e.fillText(String.fromCharCode(55357,56835),0,0):e.fillText(String.fromCharCode(55356,57135),0,0),0!==e.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag"),unicode8:d("unicode8"),diversity:d("diversity")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag&&c.supports.unicode8&&c.supports.diversity||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/wp-emoji-release.js"></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="jetpack-subscriptions-css" href="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/subscriptions.css" type="text/css" media="all">
+<link rel="stylesheet" id="jetpack_related-posts-css" href="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/related-posts.css" type="text/css" media="all">
+<link rel="stylesheet" id="contact-form-7-css" href="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/styles.css" type="text/css" media="all">
+<link rel="stylesheet" id="csbwf_sidebar_style-css" href="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/csbwfs.css" type="text/css" media="all">
+<link rel="stylesheet" id="jquery.fancybox-css" href="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/jquery.css" type="text/css" media="all">
+<link rel="stylesheet" id="responsive-lightbox-swipebox-css" href="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/swipebox.css" type="text/css" media="all">
+<link rel="stylesheet" id="tt-easy-google-fonts-css" href="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/css_002.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-syntax-css-css" href="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/wp-syntax.css" type="text/css" media="all">
+<link rel="stylesheet" id="jetpack-widgets-css" href="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/widgets.css" type="text/css" media="all">
+<link rel="stylesheet" id="style-css" href="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="responsive-css" href="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/responsive.css" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-css" href="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/font-awesome.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-gist-style-css" href="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/style.htm" type="text/css" media="all">
+<link rel="stylesheet" id="sharedaddy-css" href="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/sharing.css" type="text/css" media="all">
+<link rel="stylesheet" id="genericons-css" href="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/genericons.css" type="text/css" media="all">
+<link rel="stylesheet" id="widget-grid-and-list-css" href="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/widget-grid-and-list.css" type="text/css" media="all">
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/jquery_003.js"></script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/jquery-migrate.js"></script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/related-posts.js"></script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/jquery.js"></script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/jquery_004.js"></script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/jquery_002.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var rlArgs = {"script":"swipebox","selector":"lightbox","customEvents":"","activeGalleries":"1","animation":"1","hideCloseButtonOnMobile":"0","removeBarsOnMobile":"0","hideBars":"1","hideBarsDelay":"5000","videoMaxWidth":"1080","useSVG":"1","loopAtEnd":"0"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/front.js"></script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/jquery_005.js"></script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/external-tracking.js"></script>
+<link rel="https://api.w.org/" href="http://algorithms.tutorialhorizon.com/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://algorithms.tutorialhorizon.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://algorithms.tutorialhorizon.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Reverse a Linked List — Part&nbsp;2" href="http://algorithms.tutorialhorizon.com/reverse-a-linked-list-part-2/">
+<link rel="next" title="Reverse the binary representation of a number." href="http://algorithms.tutorialhorizon.com/reverse-the-binary-representation-of-a-number/">
+<meta name="generator" content="WordPress 4.4.1">
+<link rel="shortlink" href="http://wp.me/p4QfBD-3K">
+<link rel="alternate" type="application/json+oembed" href="http://algorithms.tutorialhorizon.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Falgorithms.tutorialhorizon.com%2Fbinary-search-tree-complete-implementation%2F">
+<link rel="alternate" type="text/xml+oembed" href="http://algorithms.tutorialhorizon.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Falgorithms.tutorialhorizon.com%2Fbinary-search-tree-complete-implementation%2F&amp;format=xml">
+<script src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/embed.js" async="" type="text/javascript"></script><link rel="stylesheet" type="text/css" id="gravatar-card-css" href="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/hovercard.css"><link rel="stylesheet" type="text/css" id="gravatar-card-services-css" href="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/services.css"><script src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/timeline.js" async="" charset="utf-8" type="text/javascript"></script><script charset="UTF-8" async="" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/alfie.js"></script></head><body class="single single-post postid-232 single-format-standard col-2cl full-width chrome s1-collapse s2-collapse"><div id="csbwfs-delaydiv"><div class="csbwfs-social-widget" id="csbwfs-right" title="Share This With Your Friends" style="top:25%;right:-5px;"><div style="display: none;" class="csbwfs-show"><a href="javascript:" title="Show Buttons" id="csbwfs-show"><img src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/hide-r.png" alt="Show Buttons"></a></div><div id="csbwfs-social-inner"><div class="csbwfs-sbutton"><div id="csbwfs-fb"><a href="https://www.facebook.com/sharer/sharer.php?u=http://algorithms.tutorialhorizon.com/binary-search-tree-complete-implementation/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" target="_blank" title="Share On Facebook"><img src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/fb.png" alt="Share On Facebook"></a></div></div><div class="csbwfs-sbutton"><div id="csbwfs-tw"><a href="javascript:" onclick="window.open('http://twitter.com/share?url=http://algorithms.tutorialhorizon.com/binary-search-tree-complete-implementation/&amp;text=Binary+Search+Tree+Complete+Implementation.','_blank','width=800,height=300')" title="Share On Twitter"><img src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/tw.png" alt="Share On Twitter"></a></div></div><div class="csbwfs-sbutton"><div id="csbwfs-gp"><a style="width: 45px;" href="https://plus.google.com/share?url=http://algorithms.tutorialhorizon.com/binary-search-tree-complete-implementation/" onclick="javascript:window.open(this.href,'','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=800');return false;" title="Share On Google Plus"><img src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/gp.png" alt="Share On Google Plus"></a></div></div><div class="csbwfs-sbutton"><div id="csbwfs-li"><a href="https://www.linkedin.com/cws/share?mini=true&amp;url=http://algorithms.tutorialhorizon.com/binary-search-tree-complete-implementation/" onclick="javascript:window.open(this.href,'','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=800');return false;" title="Share On Linkdin"><img src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/in.png" alt="Share On Linkdin"></a></div></div><div class="csbwfs-sbutton"><div id="csbwfs-re"><a style="width: 45px;" onclick="window.open('http://reddit.com/submit?url=http://algorithms.tutorialhorizon.com/binary-search-tree-complete-implementation/&amp;title=Binary+Search+Tree+Complete+Implementation.','Reddit','toolbar=0,status=0,width=1000,height=800');" href="javascript:void(0);" title="Share On Reddit"><img src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/reddit.png" alt="Share On Reddit"></a></div></div><div class="csbwfs-sbutton"><div id="csbwfs-ml"><a style="width: 45px;" href="mailto:?subject=Binary+Search+Tree+Complete+Implementation.&amp;body=http://algorithms.tutorialhorizon.com/binary-search-tree-complete-implementation/" title="Contact us"><img src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/ml.png" alt="Contact us"></a></div></div></div><div class="csbwfs-hide"><a href="javascript:" title="Hide Buttons" id="csbwfs-hide"><img src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/show.png" alt="Hide Buttons"></a></div></div></div><script type="text/javascript">
+  jQuery(document).ready(function($){
+    var select = $('a[href$=".bmp"],a[href$=".gif"],a[href$=".jpg"],a[href$=".jpeg"],a[href$=".png"],a[href$=".BMP"],a[href$=".GIF"],a[href$=".JPG"],a[href$=".JPEG"],a[href$=".PNG"]');
+    select.attr('rel', 'fancybox');
+    select.fancybox();
+  });
+</script>
+<style type="text/css">
+sup {
+	vertical-align: 60%;
+	font-size: 75%;
+	line-height: 100%;
+}
+sub {
+	vertical-align: -10%;
+	font-size: 75%;
+	line-height: 100%;
+}
+.amp {
+	font-family: Baskerville, "Goudy Old Style", "Palatino", "Book Antiqua", "Warnock Pro", serif;
+	font-weight: normal;
+	font-style: italic;
+	font-size: 1.1em;
+	line-height: 1em;
+}
+.caps {
+	font-size: 90%;
+}
+.dquo {
+	margin-left:-.40em;
+}
+.quo {
+	margin-left:-.2em;
+}
+/* because formatting .numbers should consider your current font settings, we will not style it here */
+
+</style>
+<link rel="apple-touch-icon" sizes="57x57" href="http://algorithms.tutorialhorizon.com/files/fbrfg/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="http://algorithms.tutorialhorizon.com/files/fbrfg/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="http://algorithms.tutorialhorizon.com/files/fbrfg/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="http://algorithms.tutorialhorizon.com/files/fbrfg/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="http://algorithms.tutorialhorizon.com/files/fbrfg/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="http://algorithms.tutorialhorizon.com/files/fbrfg/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="http://algorithms.tutorialhorizon.com/files/fbrfg/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="http://algorithms.tutorialhorizon.com/files/fbrfg/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://algorithms.tutorialhorizon.com/files/fbrfg/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="http://algorithms.tutorialhorizon.com/files/fbrfg/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="http://algorithms.tutorialhorizon.com/files/fbrfg/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="http://algorithms.tutorialhorizon.com/files/fbrfg/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="http://algorithms.tutorialhorizon.com/files/fbrfg/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="http://algorithms.tutorialhorizon.com/files/fbrfg/manifest.json">
+<link rel="shortcut icon" href="http://algorithms.tutorialhorizon.com/files/fbrfg/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="/files/fbrfg/mstile-144x144.png">
+<meta name="msapplication-config" content="/files/fbrfg/browserconfig.xml">
+<meta name="theme-color" content="#ffffff"><!--[if lt IE 9]>
+<script src="http://algorithms.tutorialhorizon.com/wp-content/themes/hueman/js/ie/html5.js"></script>
+<script src="http://algorithms.tutorialhorizon.com/wp-content/themes/hueman/js/ie/selectivizr.js"></script>
+<![endif]-->
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		
+<!-- All in One SEO Pack 2.2.2 by Michael Torbert of Semper Fi Web Design[357,426] -->
+<meta name="description" content="Implementation of Binary Search Tree in Java with the Operations for insert a node, delete a node when node has no, one or two children, Find a node in tree">
+
+<meta name="keywords" content="java code for linked list,algorithms, data structures, algorithms and data structures, algorithms interview questions, algorithms puzzles, interview questions, algorithms in java,coding interview questions, implementation of binary search tree in java with the operations for insert a node, delete a node when node has no, one or two children, find a node in tree, binary search tree complete implementation in java, binary seacrh tree, binary search tree implementation, bst implementaion, insert a node in a bimary search tree, delete a node in a bimary search tree, delete a node in a bimary search tree when node has no children, delete a node in a bimary search tree when node has only one child, delete a node in a bimary search tree when node has two children , find a successor for deleted node, find a successor,trees">
+
+<link rel="canonical" href="http://algorithms.tutorialhorizon.com/binary-search-tree-complete-implementation/">
+<!-- /all in one seo pack -->
+
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Binary Search Tree Complete Implementation.">
+<meta property="og:url" content="http://algorithms.tutorialhorizon.com/binary-search-tree-complete-implementation/">
+<meta property="og:description" content="Binary Tree : A data structure in which we have nodes containing data and two references to other nodes, one on the left and one on the right. Binary Tree consist of Nodes Nodes are nothing but obj...">
+<meta property="article:published_time" content="2014-09-16T05:38:04+00:00">
+<meta property="article:modified_time" content="2015-12-05T01:22:22+00:00">
+<meta property="article:author" content="http://algorithms.tutorialhorizon.com/author/sumitjain/">
+<meta property="og:site_name" content="Algorithms">
+<meta property="og:image" content="http://algorithms.tutorialhorizon.com/files/2014/09/Complete-Example.png">
+<meta property="og:image" content="http://algorithms.tutorialhorizon.com/files/2014/09/BST-Node-to-be-deleted-has-2-children-Example-2.png">
+<meta property="og:image" content="http://algorithms.tutorialhorizon.com/files/2014/09/BST-Node-to-be-deleted-has-2-children-Example-1.png">
+<meta property="og:image" content="http://algorithms.tutorialhorizon.com/files/2014/09/BST-Node-to-be-deleted-has-only-one-child.1.png">
+<meta name="twitter:site" content="@jetpack">
+<meta name="twitter:image" content="http://algorithms.tutorialhorizon.com/files/2014/09/Binary-Tree-Node.png?w=240">
+<meta name="twitter:card" content="summary">
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+<!-- Google Analytics Tracking by Google Analyticator 6.4.8: http://www.videousermanuals.com/google-analyticator/ -->
+<script type="text/javascript">
+    var analyticsFileTypes = [''];
+    var analyticsSnippet = 'disabled';
+    var analyticsEventTracking = 'enabled';
+</script>
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-56784863-1', 'auto');
+ 
+	ga('send', 'pageview');
+</script>
+<style type="text/css">
+/* Dynamic CSS: For no styles in head, copy and put the css below in your child theme's style.css, disable dynamic styles */
+body { font-family: "Roboto Condensed", Arial, sans-serif; }
+</style>
+		<link rel="stylesheet" id="custom-css-css" type="text/css" href="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/a.css">
+					
+							<style id="tt-easy-google-font-styles" type="text/css">
+			
+																						p {
+							color: #353535; font-family: 'Lora'; font-size: 18px; font-style: normal; font-weight: 400; line-height: 1.8; 						}
+								
+																										h1 {
+													}
+								
+																										h2 {
+													}
+								
+																										h3 {
+							color: #dd6049; font-family: 'Lora'; font-style: normal; font-weight: 400; line-height: 2; 						}
+								
+																										h4 {
+													}
+								
+																										h5 {
+													}
+								
+																										h6 {
+													}
+								
+										
+							</style>
+						
+
+
+
+<div id="wrapper">
+
+	<header id="header">
+	
+				
+		<div class="container group">
+			<div class="container-inner">
+				
+				<div class="group pad">
+					<p class="site-title"><a href="http://algorithms.tutorialhorizon.com/" rel="home">Algorithms</a></p>
+					<p class="site-description">@tutorialhorizon</p>										<div id="header-ads">
+						<div id="text-6" class="widget widget_text">			<div class="textwidget"><script async="" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/adsbygoogle.js"></script>
+<!-- Banner 728x90 -->
+<ins data-adsbygoogle-status="done" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-1720129943462898" data-ad-slot="5859250565"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;" frameborder="0" height="90" width="728"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div>					</div><!--/#header-ads-->
+									</div>
+				
+									<nav class="nav-container group" id="nav-header">
+						<div class="nav-toggle"><i class="fa fa-bars"></i></div>
+						<div class="nav-text"><!-- put your mobile menu text here --></div>
+						<div class="nav-wrap container"><ul id="menu-main-menu" class="nav container-inner group"><li id="menu-item-183" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-183"><a href="http://algorithms.tutorialhorizon.com/">Home</a></li>
+<li id="menu-item-1661" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1661"><a href="http://algorithms.tutorialhorizon.com/contribute/">Contribute</a></li>
+<li id="menu-item-184" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-184"><a href="http://algorithms.tutorialhorizon.com/category/arrays/">Arrays</a></li>
+<li id="menu-item-188" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-188"><a href="http://algorithms.tutorialhorizon.com/category/linked-list/">Linked List</a></li>
+<li id="menu-item-189" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-189"><a href="http://algorithms.tutorialhorizon.com/category/recursion/">Recursion</a></li>
+<li id="menu-item-186" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-186"><a href="http://algorithms.tutorialhorizon.com/category/dynamic-programming/">Dynamic Programming</a></li>
+<li id="menu-item-1444" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1444"><a href="http://algorithms.tutorialhorizon.com/category/backtracking/">Backtracking</a></li>
+<li id="menu-item-263" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-263"><a href="http://algorithms.tutorialhorizon.com/category/trees/binary-tree/">Binary Tree</a></li>
+<li id="menu-item-262" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-262"><a href="http://algorithms.tutorialhorizon.com/category/trees/">Trees</a></li>
+<li id="menu-item-1442" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1442"><a href="http://algorithms.tutorialhorizon.com/category/difficulty-level/beginner-difficulty-level/">Difficulty Level</a>
+<ul style="display: none;" class="sub-menu">
+	<li id="menu-item-1439" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-1439"><a href="http://algorithms.tutorialhorizon.com/category/difficulty-level/beginner-difficulty-level/">Beginner</a></li>
+	<li id="menu-item-1441" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1441"><a href="http://algorithms.tutorialhorizon.com/category/difficulty-level/intermediate-difficulty-level/">Intermediate</a></li>
+	<li id="menu-item-1440" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1440"><a href="http://algorithms.tutorialhorizon.com/category/difficulty-level/expert/">Expert</a></li>
+</ul>
+</li>
+<li id="menu-item-193" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-193"><a href="http://algorithms.tutorialhorizon.com/category/top-companies/">Interviews</a>
+<ul style="display: none;" class="sub-menu">
+	<li id="menu-item-194" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-194"><a href="http://algorithms.tutorialhorizon.com/category/top-companies/amazon-questions/">Amazon Questions</a></li>
+	<li id="menu-item-195" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-195"><a href="http://algorithms.tutorialhorizon.com/category/top-companies/goldman-sachs/">Goldman Sachs</a></li>
+	<li id="menu-item-196" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-196"><a href="http://algorithms.tutorialhorizon.com/category/top-companies/google-interview/">Google Interview</a></li>
+	<li id="menu-item-197" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-197"><a href="http://algorithms.tutorialhorizon.com/category/top-companies/microsoft-interview/">Microsoft Interview</a></li>
+	<li id="menu-item-201" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-201"><a href="http://algorithms.tutorialhorizon.com/category/top-companies/apache/">Apache</a></li>
+	<li id="menu-item-202" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-202"><a href="http://algorithms.tutorialhorizon.com/category/top-companies/netapp/">NetApp</a></li>
+	<li id="menu-item-264" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-264"><a href="http://algorithms.tutorialhorizon.com/category/top-companies/adobe/">Adobe</a></li>
+	<li id="menu-item-265" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-265"><a href="http://algorithms.tutorialhorizon.com/category/top-companies/facebook/">Facebook</a></li>
+	<li id="menu-item-266" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-266"><a href="http://algorithms.tutorialhorizon.com/category/top-companies/nvidia/"><span class="caps">NVIDIA</span></a></li>
+	<li id="menu-item-267" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-267"><a href="http://algorithms.tutorialhorizon.com/category/top-companies/oracle/">Oracle</a></li>
+</ul>
+</li>
+<li id="menu-item-461" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-461"><a href="http://algorithms.tutorialhorizon.com/category/MISC/"><span class="caps">MISC</span></a>
+<ul style="display: none;" class="sub-menu">
+	<li id="menu-item-192" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-192"><a href="http://algorithms.tutorialhorizon.com/category/strings/">Strings</a></li>
+	<li id="menu-item-191" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-191"><a href="http://algorithms.tutorialhorizon.com/category/sorting-techniques/">Sorting</a></li>
+	<li id="menu-item-187" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-187"><a href="http://algorithms.tutorialhorizon.com/category/hash-table/">Hash Table</a></li>
+	<li id="menu-item-190" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-190"><a href="http://algorithms.tutorialhorizon.com/category/search-algorithms/">Search</a></li>
+</ul>
+</li>
+</ul></div>
+					</nav><!--/#nav-header-->
+								
+			</div><!--/.container-inner-->
+		</div><!--/.container-->
+		
+	</header><!--/#header-->
+	
+	<div class="container" id="page">
+		<div class="container-inner">			
+			<div class="main">
+				<div class="main-inner group">
+<section class="content">
+	
+	<div class="page-title pad group">
+
+			<ul class="meta-single group">
+			<li class="category"><a href="http://algorithms.tutorialhorizon.com/category/difficulty-level/beginner-difficulty-level/" rel="category tag">Beginner</a> <span>/</span> <a href="http://algorithms.tutorialhorizon.com/category/trees/binary-tree/" rel="category tag">Binary Tree</a> <span>/</span> <a href="http://algorithms.tutorialhorizon.com/category/trees/" rel="category tag">Trees</a></li>
+						<li class="comments"><a data-disqus-identifier="232 http://algorithms.tutorialhorizon.com/?p=232" href="http://algorithms.tutorialhorizon.com/binary-search-tree-complete-implementation/#disqus_thread"><i class="fa fa-comments-o"></i><span class="dsq-postid" data-dsqidentifier="232 http://algorithms.tutorialhorizon.com/?p=232">2</span></a></li>
+					</ul>
+		
+	
+</div><!--/.page-title-->	
+	<div class="pad group">
+		
+					<article class="post-232 post type-post status-publish format-standard has-post-thumbnail hentry category-beginner-difficulty-level category-binary-tree category-trees tag-trees">	
+				<div class="post-inner group">
+					
+					<h1 class="post-title">Binary Search Tree Complete Implementation.</h1>
+					<p class="post-byline">by <a href="http://algorithms.tutorialhorizon.com/author/sumitjain/" title="Posts by SJ" rel="author">SJ</a> · September 16, 2014</p>
+					
+										
+					<div class="clear"></div>
+					
+					<div class="entry">	
+						<div class="entry-inner">
+							<script async="" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/adsbygoogle.js"></script>
+<!-- Algorithm_728x90_4Sep_header -->
+<ins data-adsbygoogle-status="done" class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-1720129943462898" data-ad-slot="1567216560"><ins id="aswift_1_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><ins id="aswift_1_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;" frameborder="0" height="90" width="728"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script><p><strong>Binary Tree :</strong> A data struc­ture in which we
+ have nodes con­tain­ing data and two ref­er­ences to other nodes, one 
+on the left and one on the&nbsp;right.</p>
+<p>Binary Tree con­sist of&nbsp;Nodes</p>
+<ul>
+<li>Nodes are noth­ing but objects of a class and each node has data and a link to the left node and right&nbsp;node.</li>
+<li>Usu­ally we call the start­ing node of a tree as <em>root</em>.</li>
+</ul>
+<pre>class Node{
+	int data;
+	Node left;
+	Node right;	
+	public Node(int data){
+		this.data = data;
+		left = null;
+		right = null;
+	}
+}
+</pre>
+<p><span id="more-232"></span></p>
+<ul>
+<li>&nbsp;Left and right node of a Leaf node points to <span class="caps">NULL</span> so you will know that you have reached to the end of the&nbsp;tree.</li>
+</ul>
+<div id="attachment_233" style="width: 410px" class="wp-caption aligncenter"><a rel="fancybox" href="http://algorithms.tutorialhorizon.com/files/2014/09/Binary-Tree-Node.png" data-rel="lightbox-0"><img class="wp-image-233" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/Binary-Tree-Node.png" alt="Binary Tree Node" srcset="http://algorithms.tutorialhorizon.com/files/2014/09/Binary-Tree-Node-300x142.png 300w, http://algorithms.tutorialhorizon.com/files/2014/09/Binary-Tree-Node-520x245.png 520w, http://algorithms.tutorialhorizon.com/files/2014/09/Binary-Tree-Node-720x340.png 720w, http://algorithms.tutorialhorizon.com/files/2014/09/Binary-Tree-Node-150x71.png 150w, http://algorithms.tutorialhorizon.com/files/2014/09/Binary-Tree-Node.png 647w" sizes="(max-width: 400px) 100vw, 400px" height="189" width="400"></a><p class="wp-caption-text">Binary Tree&nbsp;Node</p></div>
+<p><strong>Binary Search Tree:</strong></p>
+<p>Often we call it as <span class="caps">BST</span>, is a type of Binary tree which has a spe­cial property.</p>
+<p><em>Nodes smaller than root goes to the left of the root and Nodes greater than root goes to the right of the root</em>.</p>
+<div id="attachment_234" style="width: 460px" class="wp-caption aligncenter"><a rel="fancybox" href="http://algorithms.tutorialhorizon.com/files/2014/09/Binary-Search-Tree.png" data-rel="lightbox-1"><img class="wp-image-234" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/Binary-Search-Tree.png" alt="Binary Search Tree" srcset="http://algorithms.tutorialhorizon.com/files/2014/09/Binary-Search-Tree-150x150.png 150w, http://algorithms.tutorialhorizon.com/files/2014/09/Binary-Search-Tree-300x300.png 300w, http://algorithms.tutorialhorizon.com/files/2014/09/Binary-Search-Tree-160x160.png 160w, http://algorithms.tutorialhorizon.com/files/2014/09/Binary-Search-Tree-320x320.png 320w, http://algorithms.tutorialhorizon.com/files/2014/09/Binary-Search-Tree.png 750w" sizes="(max-width: 450px) 100vw, 450px" height="450" width="450"></a><p class="wp-caption-text">Binary Search Tree</p></div>
+<p><strong>Oper­a­tions:</strong></p>
+<p><strong>Insert(int n) :</strong> Add a node the tree with value n. Its&nbsp;O(lgn)</p>
+<p><strong>Find(int n) :</strong> Find a node the tree with value n. Its&nbsp;O(lgn)</p>
+<p><strong>Delete (int n) </strong>: Delete a node the tree with value n. Its&nbsp;O(lgn)</p>
+<p><strong>Dis­play</strong>(): Prints the entire tree in increas­ing order. O(n).</p>
+<p>Detail Expla­na­tions for the Operations:</p>
+<p><strong>Find(int n):</strong></p>
+<ul>
+<li>Its very sim­ple oper­a­tion to perform.</li>
+<li>start from the root and com­pare root.data with&nbsp;n</li>
+<li>if root.data is greater than n that means we need to go to the left of the&nbsp;root.</li>
+<li>if root.data is smaller than n that means we need to go to the right of the&nbsp;root.</li>
+<li>if any point of time root.data is equal to the n then we have found the node, return true.</li>
+<li>if we reach to the leaves (end of the tree) return false, we didn’t find the element</li>
+</ul>
+<div id="attachment_235" style="width: 470px" class="wp-caption aligncenter"><a rel="fancybox" href="http://algorithms.tutorialhorizon.com/files/2014/09/BST-Find.png" data-rel="lightbox-2"><img class="wp-image-235" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/BST-Find.png" alt="BST Find()" srcset="http://algorithms.tutorialhorizon.com/files/2014/09/BST-Find-150x150.png 150w, http://algorithms.tutorialhorizon.com/files/2014/09/BST-Find-300x300.png 300w, http://algorithms.tutorialhorizon.com/files/2014/09/BST-Find-160x160.png 160w, http://algorithms.tutorialhorizon.com/files/2014/09/BST-Find-320x320.png 320w, http://algorithms.tutorialhorizon.com/files/2014/09/BST-Find.png 750w" sizes="(max-width: 460px) 100vw, 460px" height="460" width="460"></a><p class="wp-caption-text"><span class="caps">BST</span> Find()</p></div>
+<p><strong>Insert(int n):</strong></p>
+<ul>
+<li>Very much sim­i­lar to find() operation.</li>
+<li>To insert a node our first task is to find the place to insert the&nbsp;node.</li>
+<li>Take cur­rent =&nbsp;root .</li>
+<li>start from the cur­rent and com­pare root.data with&nbsp;n</li>
+<li>if current.data is greater than n that means we need to go to the left of the&nbsp;root.</li>
+<li>if current.data is smaller than n that means we need to go to the right of the&nbsp;root.</li>
+<li>if any point of time cur­rent is null that means we have reached to 
+the leaf node, insert your node here with the help of par­ent node. 
+(See&nbsp;code)</li>
+</ul>
+<div id="attachment_236" style="width: 460px" class="wp-caption aligncenter"><a rel="fancybox" href="http://algorithms.tutorialhorizon.com/files/2014/09/BST-Insert.png" data-rel="lightbox-3"><img class="wp-image-236" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/BST-Insert.png" alt="BST Insert()" srcset="http://algorithms.tutorialhorizon.com/files/2014/09/BST-Insert-150x150.png 150w, http://algorithms.tutorialhorizon.com/files/2014/09/BST-Insert-300x300.png 300w, http://algorithms.tutorialhorizon.com/files/2014/09/BST-Insert-160x160.png 160w, http://algorithms.tutorialhorizon.com/files/2014/09/BST-Insert-320x320.png 320w, http://algorithms.tutorialhorizon.com/files/2014/09/BST-Insert.png 750w" sizes="(max-width: 450px) 100vw, 450px" height="450" width="450"></a><p class="wp-caption-text"><span class="caps">BST</span> Insert()</p></div>
+<p><strong>Delete(int n):</strong></p>
+<p>Com­pli­cated than Find() and Insert() oper­a­tions. Here we have to deal with 3&nbsp;cases.</p>
+<ul>
+<li>Node to be deleted is a leaf node ( No Children).</li>
+<li>Node to be deleted has only one&nbsp;child.</li>
+<li>Node to be deleted has two childrens.</li>
+</ul>
+<p><strong>Node to be deleted is a leaf node ( No Children).</strong></p>
+<p>its a very sim­ple case, if a node to be deleted has no chil­dren 
+then just tra­verse to that node, keep track of par­ent node and the 
+side in which the node exist(left or right) and set <strong><em>parent.left = null or parent.right =&nbsp;null;</em></strong></p>
+<p>&nbsp;</p>
+<div id="attachment_238" style="width: 460px" class="wp-caption aligncenter"><a rel="fancybox" href="http://algorithms.tutorialhorizon.com/files/2014/09/BST-Node-to-be-deleted-is-a-leaf-node-No-Children.1.png" data-rel="lightbox-4"><img class="wp-image-238" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/BST-Node-to-be-deleted-is-a-leaf-node-No-Children.png" alt="BST - Node to be deleted is a leaf node ( No Children)." srcset="http://algorithms.tutorialhorizon.com/files/2014/09/BST-Node-to-be-deleted-is-a-leaf-node-No-Children.1-150x150.png 150w, http://algorithms.tutorialhorizon.com/files/2014/09/BST-Node-to-be-deleted-is-a-leaf-node-No-Children.1-300x300.png 300w, http://algorithms.tutorialhorizon.com/files/2014/09/BST-Node-to-be-deleted-is-a-leaf-node-No-Children.1-160x160.png 160w, http://algorithms.tutorialhorizon.com/files/2014/09/BST-Node-to-be-deleted-is-a-leaf-node-No-Children.1-320x320.png 320w, http://algorithms.tutorialhorizon.com/files/2014/09/BST-Node-to-be-deleted-is-a-leaf-node-No-Children.1.png 750w" sizes="(max-width: 450px) 100vw, 450px" height="450" width="450"></a><p class="wp-caption-text"><span class="caps">BST</span> — Node to be deleted is a leaf node ( No Children).</p></div>
+<p><strong>Node to be deleted has only one&nbsp;child.</strong></p>
+<ol>
+<li>its a slightly com­plex case. if a node to be deleted(deleteNode) 
+has only one child then just tra­verse to that node, keep track of 
+par­ent node and the side in which the node exist(left or&nbsp;right).</li>
+<li>check which side child is null (since it has only one&nbsp;child).</li>
+<li>Say node to be deleted has child on its left side . Then take the 
+entire sub tree from the left side and add it to the par­ent and the 
+side on which deleteN­ode exist, see step 1 and example.</li>
+</ol>
+<div id="attachment_240" style="width: 510px" class="wp-caption aligncenter"><a rel="fancybox" href="http://algorithms.tutorialhorizon.com/files/2014/09/BST-Node-to-be-deleted-has-only-one-child.1.png" data-rel="lightbox-5"><img class="wp-image-240" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/BST-Node-to-be-deleted-has-only-one-child.png" alt="BST - Node to be deleted has only one child." srcset="http://algorithms.tutorialhorizon.com/files/2014/09/BST-Node-to-be-deleted-has-only-one-child.1-300x190.png 300w, http://algorithms.tutorialhorizon.com/files/2014/09/BST-Node-to-be-deleted-has-only-one-child.1-1024x647.png 1024w, http://algorithms.tutorialhorizon.com/files/2014/09/BST-Node-to-be-deleted-has-only-one-child.1-150x95.png 150w, http://algorithms.tutorialhorizon.com/files/2014/09/BST-Node-to-be-deleted-has-only-one-child.1.png 1143w" sizes="(max-width: 500px) 100vw, 500px" height="316" width="500"></a><p class="wp-caption-text"><span class="caps">BST</span> — Node to be deleted has only one&nbsp;child.</p></div>
+<p><strong>Node to be deleted has two childrens.</strong></p>
+<p>Now this is quite exciting <img src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;"></p>
+<p>You just can­not replace the deleteN­ode with any of its child, Why? Lets try out a example.</p>
+<div id="attachment_241" style="width: 510px" class="wp-caption aligncenter"><a rel="fancybox" href="http://algorithms.tutorialhorizon.com/files/2014/09/BST-Node-to-be-deleted-has-2-children-Example-1.png" data-rel="lightbox-6"><img class="wp-image-241" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/BST-Node-to-be-deleted-has-2-children-Example-1.png" alt="BST - Node to be deleted has 2 children - Example -1" srcset="http://algorithms.tutorialhorizon.com/files/2014/09/BST-Node-to-be-deleted-has-2-children-Example-1-300x152.png 300w, http://algorithms.tutorialhorizon.com/files/2014/09/BST-Node-to-be-deleted-has-2-children-Example-1-1024x518.png 1024w, http://algorithms.tutorialhorizon.com/files/2014/09/BST-Node-to-be-deleted-has-2-children-Example-1-150x76.png 150w, http://algorithms.tutorialhorizon.com/files/2014/09/BST-Node-to-be-deleted-has-2-children-Example-1.png 1199w" sizes="(max-width: 500px) 100vw, 500px" height="253" width="500"></a><p class="wp-caption-text"><span class="caps">BST</span> — Node to be deleted has 2 chil­dren — Exam­ple&nbsp;–1</p></div>
+<p><strong>What to do&nbsp;now?????</strong></p>
+<p>Dont worry we have solu­tion for&nbsp;this <img src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/simple-smile.png" alt=":)" class="wp-smiley" style="height: 1em; max-height: 1em;"></p>
+<p><strong>Find The Successor:</strong></p>
+<p>Suc­ces­sor is the node which will replace the deleted node. Now the ques­tion is to how to find it and where to find&nbsp;it.</p>
+<p><em>Suc­ces­sor is the smaller node in the right sub tree of the node to be deleted.</em></p>
+<div id="attachment_242" style="width: 510px" class="wp-caption aligncenter"><a rel="fancybox" href="http://algorithms.tutorialhorizon.com/files/2014/09/BST-Node-to-be-deleted-has-2-children-Example-2.png" data-rel="lightbox-7"><img class="wp-image-242" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/BST-Node-to-be-deleted-has-2-children-Example-2.png" alt="BST - Node to be deleted has 2 children - Example -2" srcset="http://algorithms.tutorialhorizon.com/files/2014/09/BST-Node-to-be-deleted-has-2-children-Example-2-300x180.png 300w, http://algorithms.tutorialhorizon.com/files/2014/09/BST-Node-to-be-deleted-has-2-children-Example-2-1024x615.png 1024w, http://algorithms.tutorialhorizon.com/files/2014/09/BST-Node-to-be-deleted-has-2-children-Example-2-150x90.png 150w, http://algorithms.tutorialhorizon.com/files/2014/09/BST-Node-to-be-deleted-has-2-children-Example-2.png 1199w" sizes="(max-width: 500px) 100vw, 500px" height="300" width="500"></a><p class="wp-caption-text"><span class="caps">BST</span> — Node to be deleted has 2 chil­dren — Exam­ple&nbsp;–2</p></div>
+<p><strong>Dis­play()</strong> : To know about how we are dis­play­ing nodes in increas­ing order, Click&nbsp;Here</p>
+<p>Com­plete Example :</p>
+<p>&nbsp;</p>
+<div id="attachment_243" style="width: 485px" class="wp-caption aligncenter"><a rel="fancybox" href="http://algorithms.tutorialhorizon.com/files/2014/09/Complete-Example.png" data-rel="lightbox-8"><img class="wp-image-243" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/Complete-Example.png" alt="BST - Complete Example" srcset="http://algorithms.tutorialhorizon.com/files/2014/09/Complete-Example-300x231.png 300w, http://algorithms.tutorialhorizon.com/files/2014/09/Complete-Example.png 702w" sizes="(max-width: 475px) 100vw, 475px" height="366" width="475"></a><p class="wp-caption-text"><span class="caps">BST</span> — Com­plete Example</p></div>
+<p>Com­plete Exam­ple&nbsp;Code:</p>
+<style>.gist table { margin-bottom: 0; }</style>
+<p><script src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/449545d18617a670c68f.js"></script><link rel="stylesheet" href="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/embed-2cd369fa1c0830bd3aa06c21d4f14a13e060d2d31bbaae740f4af4.css"></p><div id="gist28639718" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-binarysearchtree-java" class="file">
+    
+
+  <div class="blob-wrapper data type-java">
+      <table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-binarysearchtree-java-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-binarysearchtree-java-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-en">BinarySearchTree</span> {</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-binarysearchtree-java-LC2" class="blob-code blob-code-inner js-file-line">	<span class="pl-k">public</span> <span class="pl-k">static</span>  <span class="pl-smi">Node</span> root;</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-binarysearchtree-java-LC3" class="blob-code blob-code-inner js-file-line">	<span class="pl-k">public</span> <span class="pl-en">BinarySearchTree</span>(){</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="file-binarysearchtree-java-LC4" class="blob-code blob-code-inner js-file-line">		<span class="pl-v">this</span><span class="pl-k">.</span>root <span class="pl-k">=</span> <span class="pl-c1">null</span>;</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L5" class="blob-num js-line-number" data-line-number="5"></td>
+        <td id="file-binarysearchtree-java-LC5" class="blob-code blob-code-inner js-file-line">	}</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L6" class="blob-num js-line-number" data-line-number="6"></td>
+        <td id="file-binarysearchtree-java-LC6" class="blob-code blob-code-inner js-file-line">	</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L7" class="blob-num js-line-number" data-line-number="7"></td>
+        <td id="file-binarysearchtree-java-LC7" class="blob-code blob-code-inner js-file-line">	<span class="pl-k">public</span> <span class="pl-k">boolean</span> <span class="pl-en">find</span>(<span class="pl-k">int</span> <span class="pl-v">id</span>){</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L8" class="blob-num js-line-number" data-line-number="8"></td>
+        <td id="file-binarysearchtree-java-LC8" class="blob-code blob-code-inner js-file-line">		<span class="pl-smi">Node</span> current <span class="pl-k">=</span> root;</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L9" class="blob-num js-line-number" data-line-number="9"></td>
+        <td id="file-binarysearchtree-java-LC9" class="blob-code blob-code-inner js-file-line">		<span class="pl-k">while</span>(current<span class="pl-k">!=</span><span class="pl-c1">null</span>){</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L10" class="blob-num js-line-number" data-line-number="10"></td>
+        <td id="file-binarysearchtree-java-LC10" class="blob-code blob-code-inner js-file-line">			<span class="pl-k">if</span>(current<span class="pl-k">.</span>data<span class="pl-k">==</span>id){</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L11" class="blob-num js-line-number" data-line-number="11"></td>
+        <td id="file-binarysearchtree-java-LC11" class="blob-code blob-code-inner js-file-line">				<span class="pl-k">return</span> <span class="pl-c1">true</span>;</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L12" class="blob-num js-line-number" data-line-number="12"></td>
+        <td id="file-binarysearchtree-java-LC12" class="blob-code blob-code-inner js-file-line">			}<span class="pl-k">else</span> <span class="pl-k">if</span>(current<span class="pl-k">.</span>data<span class="pl-k">&amp;</span>gt;id){</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L13" class="blob-num js-line-number" data-line-number="13"></td>
+        <td id="file-binarysearchtree-java-LC13" class="blob-code blob-code-inner js-file-line">				current <span class="pl-k">=</span> current<span class="pl-k">.</span>left;</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L14" class="blob-num js-line-number" data-line-number="14"></td>
+        <td id="file-binarysearchtree-java-LC14" class="blob-code blob-code-inner js-file-line">			}<span class="pl-k">else</span>{</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L15" class="blob-num js-line-number" data-line-number="15"></td>
+        <td id="file-binarysearchtree-java-LC15" class="blob-code blob-code-inner js-file-line">				current <span class="pl-k">=</span> current<span class="pl-k">.</span>right;</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L16" class="blob-num js-line-number" data-line-number="16"></td>
+        <td id="file-binarysearchtree-java-LC16" class="blob-code blob-code-inner js-file-line">			}</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L17" class="blob-num js-line-number" data-line-number="17"></td>
+        <td id="file-binarysearchtree-java-LC17" class="blob-code blob-code-inner js-file-line">		}</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L18" class="blob-num js-line-number" data-line-number="18"></td>
+        <td id="file-binarysearchtree-java-LC18" class="blob-code blob-code-inner js-file-line">		<span class="pl-k">return</span> <span class="pl-c1">false</span>;</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L19" class="blob-num js-line-number" data-line-number="19"></td>
+        <td id="file-binarysearchtree-java-LC19" class="blob-code blob-code-inner js-file-line">	}</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L20" class="blob-num js-line-number" data-line-number="20"></td>
+        <td id="file-binarysearchtree-java-LC20" class="blob-code blob-code-inner js-file-line">	<span class="pl-k">public</span> <span class="pl-k">boolean</span> <span class="pl-en">delete</span>(<span class="pl-k">int</span> <span class="pl-v">id</span>){</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L21" class="blob-num js-line-number" data-line-number="21"></td>
+        <td id="file-binarysearchtree-java-LC21" class="blob-code blob-code-inner js-file-line">		<span class="pl-smi">Node</span> parent <span class="pl-k">=</span> root;</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L22" class="blob-num js-line-number" data-line-number="22"></td>
+        <td id="file-binarysearchtree-java-LC22" class="blob-code blob-code-inner js-file-line">		<span class="pl-smi">Node</span> current <span class="pl-k">=</span> root;</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L23" class="blob-num js-line-number" data-line-number="23"></td>
+        <td id="file-binarysearchtree-java-LC23" class="blob-code blob-code-inner js-file-line">		<span class="pl-k">boolean</span> isLeftChild <span class="pl-k">=</span> <span class="pl-c1">false</span>;</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L24" class="blob-num js-line-number" data-line-number="24"></td>
+        <td id="file-binarysearchtree-java-LC24" class="blob-code blob-code-inner js-file-line">		<span class="pl-k">while</span>(current<span class="pl-k">.</span>data<span class="pl-k">!=</span>id){</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L25" class="blob-num js-line-number" data-line-number="25"></td>
+        <td id="file-binarysearchtree-java-LC25" class="blob-code blob-code-inner js-file-line">			parent <span class="pl-k">=</span> current;</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L26" class="blob-num js-line-number" data-line-number="26"></td>
+        <td id="file-binarysearchtree-java-LC26" class="blob-code blob-code-inner js-file-line">			<span class="pl-k">if</span>(current<span class="pl-k">.</span>data<span class="pl-k">&amp;</span>gt;id){</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L27" class="blob-num js-line-number" data-line-number="27"></td>
+        <td id="file-binarysearchtree-java-LC27" class="blob-code blob-code-inner js-file-line">				isLeftChild <span class="pl-k">=</span> <span class="pl-c1">true</span>;</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L28" class="blob-num js-line-number" data-line-number="28"></td>
+        <td id="file-binarysearchtree-java-LC28" class="blob-code blob-code-inner js-file-line">				current <span class="pl-k">=</span> current<span class="pl-k">.</span>left;</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L29" class="blob-num js-line-number" data-line-number="29"></td>
+        <td id="file-binarysearchtree-java-LC29" class="blob-code blob-code-inner js-file-line">			}<span class="pl-k">else</span>{</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L30" class="blob-num js-line-number" data-line-number="30"></td>
+        <td id="file-binarysearchtree-java-LC30" class="blob-code blob-code-inner js-file-line">				isLeftChild <span class="pl-k">=</span> <span class="pl-c1">false</span>;</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L31" class="blob-num js-line-number" data-line-number="31"></td>
+        <td id="file-binarysearchtree-java-LC31" class="blob-code blob-code-inner js-file-line">				current <span class="pl-k">=</span> current<span class="pl-k">.</span>right;</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L32" class="blob-num js-line-number" data-line-number="32"></td>
+        <td id="file-binarysearchtree-java-LC32" class="blob-code blob-code-inner js-file-line">			}</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L33" class="blob-num js-line-number" data-line-number="33"></td>
+        <td id="file-binarysearchtree-java-LC33" class="blob-code blob-code-inner js-file-line">			<span class="pl-k">if</span>(current <span class="pl-k">==</span><span class="pl-c1">null</span>){</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L34" class="blob-num js-line-number" data-line-number="34"></td>
+        <td id="file-binarysearchtree-java-LC34" class="blob-code blob-code-inner js-file-line">				<span class="pl-k">return</span> <span class="pl-c1">false</span>;</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L35" class="blob-num js-line-number" data-line-number="35"></td>
+        <td id="file-binarysearchtree-java-LC35" class="blob-code blob-code-inner js-file-line">			}</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L36" class="blob-num js-line-number" data-line-number="36"></td>
+        <td id="file-binarysearchtree-java-LC36" class="blob-code blob-code-inner js-file-line">		}</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L37" class="blob-num js-line-number" data-line-number="37"></td>
+        <td id="file-binarysearchtree-java-LC37" class="blob-code blob-code-inner js-file-line">		<span class="pl-c">//if i am here that means we have found the node</span></td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L38" class="blob-num js-line-number" data-line-number="38"></td>
+        <td id="file-binarysearchtree-java-LC38" class="blob-code blob-code-inner js-file-line">		<span class="pl-c">//Case 1: if node to be deleted has no children</span></td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L39" class="blob-num js-line-number" data-line-number="39"></td>
+        <td id="file-binarysearchtree-java-LC39" class="blob-code blob-code-inner js-file-line">		<span class="pl-k">if</span>(current<span class="pl-k">.</span>left<span class="pl-k">==</span><span class="pl-c1">null</span> <span class="pl-k">&amp;</span>amp;<span class="pl-k">&amp;</span>amp; current<span class="pl-k">.</span>right<span class="pl-k">==</span><span class="pl-c1">null</span>){</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L40" class="blob-num js-line-number" data-line-number="40"></td>
+        <td id="file-binarysearchtree-java-LC40" class="blob-code blob-code-inner js-file-line">			<span class="pl-k">if</span>(current<span class="pl-k">==</span>root){</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L41" class="blob-num js-line-number" data-line-number="41"></td>
+        <td id="file-binarysearchtree-java-LC41" class="blob-code blob-code-inner js-file-line">				root <span class="pl-k">=</span> <span class="pl-c1">null</span>;</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L42" class="blob-num js-line-number" data-line-number="42"></td>
+        <td id="file-binarysearchtree-java-LC42" class="blob-code blob-code-inner js-file-line">			}</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L43" class="blob-num js-line-number" data-line-number="43"></td>
+        <td id="file-binarysearchtree-java-LC43" class="blob-code blob-code-inner js-file-line">			<span class="pl-k">if</span>(isLeftChild <span class="pl-k">==</span><span class="pl-c1">true</span>){</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L44" class="blob-num js-line-number" data-line-number="44"></td>
+        <td id="file-binarysearchtree-java-LC44" class="blob-code blob-code-inner js-file-line">				parent<span class="pl-k">.</span>left <span class="pl-k">=</span> <span class="pl-c1">null</span>;</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L45" class="blob-num js-line-number" data-line-number="45"></td>
+        <td id="file-binarysearchtree-java-LC45" class="blob-code blob-code-inner js-file-line">			}<span class="pl-k">else</span>{</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L46" class="blob-num js-line-number" data-line-number="46"></td>
+        <td id="file-binarysearchtree-java-LC46" class="blob-code blob-code-inner js-file-line">				parent<span class="pl-k">.</span>right <span class="pl-k">=</span> <span class="pl-c1">null</span>;</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L47" class="blob-num js-line-number" data-line-number="47"></td>
+        <td id="file-binarysearchtree-java-LC47" class="blob-code blob-code-inner js-file-line">			}</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L48" class="blob-num js-line-number" data-line-number="48"></td>
+        <td id="file-binarysearchtree-java-LC48" class="blob-code blob-code-inner js-file-line">		}</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L49" class="blob-num js-line-number" data-line-number="49"></td>
+        <td id="file-binarysearchtree-java-LC49" class="blob-code blob-code-inner js-file-line">		<span class="pl-c">//Case 2 : if node to be deleted has only one child</span></td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L50" class="blob-num js-line-number" data-line-number="50"></td>
+        <td id="file-binarysearchtree-java-LC50" class="blob-code blob-code-inner js-file-line">		<span class="pl-k">else</span> <span class="pl-k">if</span>(current<span class="pl-k">.</span>right<span class="pl-k">==</span><span class="pl-c1">null</span>){</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L51" class="blob-num js-line-number" data-line-number="51"></td>
+        <td id="file-binarysearchtree-java-LC51" class="blob-code blob-code-inner js-file-line">			<span class="pl-k">if</span>(current<span class="pl-k">==</span>root){</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L52" class="blob-num js-line-number" data-line-number="52"></td>
+        <td id="file-binarysearchtree-java-LC52" class="blob-code blob-code-inner js-file-line">				root <span class="pl-k">=</span> current<span class="pl-k">.</span>left;</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L53" class="blob-num js-line-number" data-line-number="53"></td>
+        <td id="file-binarysearchtree-java-LC53" class="blob-code blob-code-inner js-file-line">			}<span class="pl-k">else</span> <span class="pl-k">if</span>(isLeftChild){</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L54" class="blob-num js-line-number" data-line-number="54"></td>
+        <td id="file-binarysearchtree-java-LC54" class="blob-code blob-code-inner js-file-line">				parent<span class="pl-k">.</span>left <span class="pl-k">=</span> current<span class="pl-k">.</span>left;</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L55" class="blob-num js-line-number" data-line-number="55"></td>
+        <td id="file-binarysearchtree-java-LC55" class="blob-code blob-code-inner js-file-line">			}<span class="pl-k">else</span>{</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L56" class="blob-num js-line-number" data-line-number="56"></td>
+        <td id="file-binarysearchtree-java-LC56" class="blob-code blob-code-inner js-file-line">				parent<span class="pl-k">.</span>right <span class="pl-k">=</span> current<span class="pl-k">.</span>left;</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L57" class="blob-num js-line-number" data-line-number="57"></td>
+        <td id="file-binarysearchtree-java-LC57" class="blob-code blob-code-inner js-file-line">			}</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L58" class="blob-num js-line-number" data-line-number="58"></td>
+        <td id="file-binarysearchtree-java-LC58" class="blob-code blob-code-inner js-file-line">		}</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L59" class="blob-num js-line-number" data-line-number="59"></td>
+        <td id="file-binarysearchtree-java-LC59" class="blob-code blob-code-inner js-file-line">		<span class="pl-k">else</span> <span class="pl-k">if</span>(current<span class="pl-k">.</span>left<span class="pl-k">==</span><span class="pl-c1">null</span>){</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L60" class="blob-num js-line-number" data-line-number="60"></td>
+        <td id="file-binarysearchtree-java-LC60" class="blob-code blob-code-inner js-file-line">			<span class="pl-k">if</span>(current<span class="pl-k">==</span>root){</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L61" class="blob-num js-line-number" data-line-number="61"></td>
+        <td id="file-binarysearchtree-java-LC61" class="blob-code blob-code-inner js-file-line">				root <span class="pl-k">=</span> current<span class="pl-k">.</span>right;</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L62" class="blob-num js-line-number" data-line-number="62"></td>
+        <td id="file-binarysearchtree-java-LC62" class="blob-code blob-code-inner js-file-line">			}<span class="pl-k">else</span> <span class="pl-k">if</span>(isLeftChild){</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L63" class="blob-num js-line-number" data-line-number="63"></td>
+        <td id="file-binarysearchtree-java-LC63" class="blob-code blob-code-inner js-file-line">				parent<span class="pl-k">.</span>left <span class="pl-k">=</span> current<span class="pl-k">.</span>right;</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L64" class="blob-num js-line-number" data-line-number="64"></td>
+        <td id="file-binarysearchtree-java-LC64" class="blob-code blob-code-inner js-file-line">			}<span class="pl-k">else</span>{</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L65" class="blob-num js-line-number" data-line-number="65"></td>
+        <td id="file-binarysearchtree-java-LC65" class="blob-code blob-code-inner js-file-line">				parent<span class="pl-k">.</span>right <span class="pl-k">=</span> current<span class="pl-k">.</span>right;</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L66" class="blob-num js-line-number" data-line-number="66"></td>
+        <td id="file-binarysearchtree-java-LC66" class="blob-code blob-code-inner js-file-line">			}</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L67" class="blob-num js-line-number" data-line-number="67"></td>
+        <td id="file-binarysearchtree-java-LC67" class="blob-code blob-code-inner js-file-line">		}<span class="pl-k">else</span> <span class="pl-k">if</span>(current<span class="pl-k">.</span>left<span class="pl-k">!=</span><span class="pl-c1">null</span> <span class="pl-k">&amp;</span>amp;<span class="pl-k">&amp;</span>amp; current<span class="pl-k">.</span>right<span class="pl-k">!=</span><span class="pl-c1">null</span>){</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L68" class="blob-num js-line-number" data-line-number="68"></td>
+        <td id="file-binarysearchtree-java-LC68" class="blob-code blob-code-inner js-file-line">			</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L69" class="blob-num js-line-number" data-line-number="69"></td>
+        <td id="file-binarysearchtree-java-LC69" class="blob-code blob-code-inner js-file-line">			<span class="pl-c">//now we have found the minimum element in the right sub tree</span></td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L70" class="blob-num js-line-number" data-line-number="70"></td>
+        <td id="file-binarysearchtree-java-LC70" class="blob-code blob-code-inner js-file-line">			<span class="pl-smi">Node</span> successor	 <span class="pl-k">=</span> getSuccessor(current);</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L71" class="blob-num js-line-number" data-line-number="71"></td>
+        <td id="file-binarysearchtree-java-LC71" class="blob-code blob-code-inner js-file-line">			<span class="pl-k">if</span>(current<span class="pl-k">==</span>root){</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L72" class="blob-num js-line-number" data-line-number="72"></td>
+        <td id="file-binarysearchtree-java-LC72" class="blob-code blob-code-inner js-file-line">				root <span class="pl-k">=</span> successor;</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L73" class="blob-num js-line-number" data-line-number="73"></td>
+        <td id="file-binarysearchtree-java-LC73" class="blob-code blob-code-inner js-file-line">			}<span class="pl-k">else</span> <span class="pl-k">if</span>(isLeftChild){</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L74" class="blob-num js-line-number" data-line-number="74"></td>
+        <td id="file-binarysearchtree-java-LC74" class="blob-code blob-code-inner js-file-line">				parent<span class="pl-k">.</span>left <span class="pl-k">=</span> successor;</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L75" class="blob-num js-line-number" data-line-number="75"></td>
+        <td id="file-binarysearchtree-java-LC75" class="blob-code blob-code-inner js-file-line">			}<span class="pl-k">else</span>{</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L76" class="blob-num js-line-number" data-line-number="76"></td>
+        <td id="file-binarysearchtree-java-LC76" class="blob-code blob-code-inner js-file-line">				parent<span class="pl-k">.</span>right <span class="pl-k">=</span> successor;</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L77" class="blob-num js-line-number" data-line-number="77"></td>
+        <td id="file-binarysearchtree-java-LC77" class="blob-code blob-code-inner js-file-line">			}			</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L78" class="blob-num js-line-number" data-line-number="78"></td>
+        <td id="file-binarysearchtree-java-LC78" class="blob-code blob-code-inner js-file-line">			successor<span class="pl-k">.</span>left <span class="pl-k">=</span> current<span class="pl-k">.</span>left;</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L79" class="blob-num js-line-number" data-line-number="79"></td>
+        <td id="file-binarysearchtree-java-LC79" class="blob-code blob-code-inner js-file-line">		}		</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L80" class="blob-num js-line-number" data-line-number="80"></td>
+        <td id="file-binarysearchtree-java-LC80" class="blob-code blob-code-inner js-file-line">		<span class="pl-k">return</span> <span class="pl-c1">true</span>;		</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L81" class="blob-num js-line-number" data-line-number="81"></td>
+        <td id="file-binarysearchtree-java-LC81" class="blob-code blob-code-inner js-file-line">	}</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L82" class="blob-num js-line-number" data-line-number="82"></td>
+        <td id="file-binarysearchtree-java-LC82" class="blob-code blob-code-inner js-file-line">	</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L83" class="blob-num js-line-number" data-line-number="83"></td>
+        <td id="file-binarysearchtree-java-LC83" class="blob-code blob-code-inner js-file-line">	<span class="pl-k">public</span> <span class="pl-smi">Node</span> <span class="pl-en">getSuccessor</span>(<span class="pl-smi">Node</span> <span class="pl-v">deleleNode</span>){</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L84" class="blob-num js-line-number" data-line-number="84"></td>
+        <td id="file-binarysearchtree-java-LC84" class="blob-code blob-code-inner js-file-line">		<span class="pl-smi">Node</span> successsor <span class="pl-k">=</span><span class="pl-c1">null</span>;</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L85" class="blob-num js-line-number" data-line-number="85"></td>
+        <td id="file-binarysearchtree-java-LC85" class="blob-code blob-code-inner js-file-line">		<span class="pl-smi">Node</span> successsorParent <span class="pl-k">=</span><span class="pl-c1">null</span>;</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L86" class="blob-num js-line-number" data-line-number="86"></td>
+        <td id="file-binarysearchtree-java-LC86" class="blob-code blob-code-inner js-file-line">		<span class="pl-smi">Node</span> current <span class="pl-k">=</span> deleleNode<span class="pl-k">.</span>right;</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L87" class="blob-num js-line-number" data-line-number="87"></td>
+        <td id="file-binarysearchtree-java-LC87" class="blob-code blob-code-inner js-file-line">		<span class="pl-k">while</span>(current<span class="pl-k">!=</span><span class="pl-c1">null</span>){</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L88" class="blob-num js-line-number" data-line-number="88"></td>
+        <td id="file-binarysearchtree-java-LC88" class="blob-code blob-code-inner js-file-line">			successsorParent <span class="pl-k">=</span> successsor;</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L89" class="blob-num js-line-number" data-line-number="89"></td>
+        <td id="file-binarysearchtree-java-LC89" class="blob-code blob-code-inner js-file-line">			successsor <span class="pl-k">=</span> current;</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L90" class="blob-num js-line-number" data-line-number="90"></td>
+        <td id="file-binarysearchtree-java-LC90" class="blob-code blob-code-inner js-file-line">			current <span class="pl-k">=</span> current<span class="pl-k">.</span>left;</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L91" class="blob-num js-line-number" data-line-number="91"></td>
+        <td id="file-binarysearchtree-java-LC91" class="blob-code blob-code-inner js-file-line">		}</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L92" class="blob-num js-line-number" data-line-number="92"></td>
+        <td id="file-binarysearchtree-java-LC92" class="blob-code blob-code-inner js-file-line">		<span class="pl-c">//check if successor has the right child, it cannot have left child for sure</span></td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L93" class="blob-num js-line-number" data-line-number="93"></td>
+        <td id="file-binarysearchtree-java-LC93" class="blob-code blob-code-inner js-file-line">		<span class="pl-c">// if it does have the right child, add it to the left of successorParent.</span></td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L94" class="blob-num js-line-number" data-line-number="94"></td>
+        <td id="file-binarysearchtree-java-LC94" class="blob-code blob-code-inner js-file-line"><span class="pl-c">//		successsorParent</span></td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L95" class="blob-num js-line-number" data-line-number="95"></td>
+        <td id="file-binarysearchtree-java-LC95" class="blob-code blob-code-inner js-file-line">		<span class="pl-k">if</span>(successsor<span class="pl-k">!=</span>deleleNode<span class="pl-k">.</span>right){</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L96" class="blob-num js-line-number" data-line-number="96"></td>
+        <td id="file-binarysearchtree-java-LC96" class="blob-code blob-code-inner js-file-line">			successsorParent<span class="pl-k">.</span>left <span class="pl-k">=</span> successsor<span class="pl-k">.</span>right;</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L97" class="blob-num js-line-number" data-line-number="97"></td>
+        <td id="file-binarysearchtree-java-LC97" class="blob-code blob-code-inner js-file-line">			successsor<span class="pl-k">.</span>right <span class="pl-k">=</span> deleleNode<span class="pl-k">.</span>right;</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L98" class="blob-num js-line-number" data-line-number="98"></td>
+        <td id="file-binarysearchtree-java-LC98" class="blob-code blob-code-inner js-file-line">		}</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L99" class="blob-num js-line-number" data-line-number="99"></td>
+        <td id="file-binarysearchtree-java-LC99" class="blob-code blob-code-inner js-file-line">		<span class="pl-k">return</span> successsor;</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L100" class="blob-num js-line-number" data-line-number="100"></td>
+        <td id="file-binarysearchtree-java-LC100" class="blob-code blob-code-inner js-file-line">	}</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L101" class="blob-num js-line-number" data-line-number="101"></td>
+        <td id="file-binarysearchtree-java-LC101" class="blob-code blob-code-inner js-file-line">	<span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">insert</span>(<span class="pl-k">int</span> <span class="pl-v">id</span>){</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L102" class="blob-num js-line-number" data-line-number="102"></td>
+        <td id="file-binarysearchtree-java-LC102" class="blob-code blob-code-inner js-file-line">		<span class="pl-smi">Node</span> newNode <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">Node</span>(id);</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L103" class="blob-num js-line-number" data-line-number="103"></td>
+        <td id="file-binarysearchtree-java-LC103" class="blob-code blob-code-inner js-file-line">		<span class="pl-k">if</span>(root<span class="pl-k">==</span><span class="pl-c1">null</span>){</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L104" class="blob-num js-line-number" data-line-number="104"></td>
+        <td id="file-binarysearchtree-java-LC104" class="blob-code blob-code-inner js-file-line">			root <span class="pl-k">=</span> newNode;</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L105" class="blob-num js-line-number" data-line-number="105"></td>
+        <td id="file-binarysearchtree-java-LC105" class="blob-code blob-code-inner js-file-line">			<span class="pl-k">return</span>;</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L106" class="blob-num js-line-number" data-line-number="106"></td>
+        <td id="file-binarysearchtree-java-LC106" class="blob-code blob-code-inner js-file-line">		}</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L107" class="blob-num js-line-number" data-line-number="107"></td>
+        <td id="file-binarysearchtree-java-LC107" class="blob-code blob-code-inner js-file-line">		<span class="pl-smi">Node</span> current <span class="pl-k">=</span> root;</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L108" class="blob-num js-line-number" data-line-number="108"></td>
+        <td id="file-binarysearchtree-java-LC108" class="blob-code blob-code-inner js-file-line">		<span class="pl-smi">Node</span> parent <span class="pl-k">=</span> <span class="pl-c1">null</span>;</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L109" class="blob-num js-line-number" data-line-number="109"></td>
+        <td id="file-binarysearchtree-java-LC109" class="blob-code blob-code-inner js-file-line">		<span class="pl-k">while</span>(<span class="pl-c1">true</span>){</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L110" class="blob-num js-line-number" data-line-number="110"></td>
+        <td id="file-binarysearchtree-java-LC110" class="blob-code blob-code-inner js-file-line">			parent <span class="pl-k">=</span> current;</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L111" class="blob-num js-line-number" data-line-number="111"></td>
+        <td id="file-binarysearchtree-java-LC111" class="blob-code blob-code-inner js-file-line">			<span class="pl-k">if</span>(id<span class="pl-k">&amp;</span>lt;current<span class="pl-k">.</span>data){				</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L112" class="blob-num js-line-number" data-line-number="112"></td>
+        <td id="file-binarysearchtree-java-LC112" class="blob-code blob-code-inner js-file-line">				current <span class="pl-k">=</span> current<span class="pl-k">.</span>left;</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L113" class="blob-num js-line-number" data-line-number="113"></td>
+        <td id="file-binarysearchtree-java-LC113" class="blob-code blob-code-inner js-file-line">				<span class="pl-k">if</span>(current<span class="pl-k">==</span><span class="pl-c1">null</span>){</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L114" class="blob-num js-line-number" data-line-number="114"></td>
+        <td id="file-binarysearchtree-java-LC114" class="blob-code blob-code-inner js-file-line">					parent<span class="pl-k">.</span>left <span class="pl-k">=</span> newNode;</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L115" class="blob-num js-line-number" data-line-number="115"></td>
+        <td id="file-binarysearchtree-java-LC115" class="blob-code blob-code-inner js-file-line">					<span class="pl-k">return</span>;</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L116" class="blob-num js-line-number" data-line-number="116"></td>
+        <td id="file-binarysearchtree-java-LC116" class="blob-code blob-code-inner js-file-line">				}</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L117" class="blob-num js-line-number" data-line-number="117"></td>
+        <td id="file-binarysearchtree-java-LC117" class="blob-code blob-code-inner js-file-line">			}<span class="pl-k">else</span>{</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L118" class="blob-num js-line-number" data-line-number="118"></td>
+        <td id="file-binarysearchtree-java-LC118" class="blob-code blob-code-inner js-file-line">				current <span class="pl-k">=</span> current<span class="pl-k">.</span>right;</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L119" class="blob-num js-line-number" data-line-number="119"></td>
+        <td id="file-binarysearchtree-java-LC119" class="blob-code blob-code-inner js-file-line">				<span class="pl-k">if</span>(current<span class="pl-k">==</span><span class="pl-c1">null</span>){</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L120" class="blob-num js-line-number" data-line-number="120"></td>
+        <td id="file-binarysearchtree-java-LC120" class="blob-code blob-code-inner js-file-line">					parent<span class="pl-k">.</span>right <span class="pl-k">=</span> newNode;</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L121" class="blob-num js-line-number" data-line-number="121"></td>
+        <td id="file-binarysearchtree-java-LC121" class="blob-code blob-code-inner js-file-line">					<span class="pl-k">return</span>;</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L122" class="blob-num js-line-number" data-line-number="122"></td>
+        <td id="file-binarysearchtree-java-LC122" class="blob-code blob-code-inner js-file-line">				}</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L123" class="blob-num js-line-number" data-line-number="123"></td>
+        <td id="file-binarysearchtree-java-LC123" class="blob-code blob-code-inner js-file-line">			}</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L124" class="blob-num js-line-number" data-line-number="124"></td>
+        <td id="file-binarysearchtree-java-LC124" class="blob-code blob-code-inner js-file-line">		}</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L125" class="blob-num js-line-number" data-line-number="125"></td>
+        <td id="file-binarysearchtree-java-LC125" class="blob-code blob-code-inner js-file-line">	}</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L126" class="blob-num js-line-number" data-line-number="126"></td>
+        <td id="file-binarysearchtree-java-LC126" class="blob-code blob-code-inner js-file-line">	<span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">display</span>(<span class="pl-smi">Node</span> <span class="pl-v">root</span>){</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L127" class="blob-num js-line-number" data-line-number="127"></td>
+        <td id="file-binarysearchtree-java-LC127" class="blob-code blob-code-inner js-file-line">		<span class="pl-k">if</span>(root<span class="pl-k">!=</span><span class="pl-c1">null</span>){</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L128" class="blob-num js-line-number" data-line-number="128"></td>
+        <td id="file-binarysearchtree-java-LC128" class="blob-code blob-code-inner js-file-line">			display(root<span class="pl-k">.</span>left);</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L129" class="blob-num js-line-number" data-line-number="129"></td>
+        <td id="file-binarysearchtree-java-LC129" class="blob-code blob-code-inner js-file-line">			<span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>print(<span class="pl-s"><span class="pl-pds">"</span> <span class="pl-pds">"</span></span> <span class="pl-k">+</span> root<span class="pl-k">.</span>data);</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L130" class="blob-num js-line-number" data-line-number="130"></td>
+        <td id="file-binarysearchtree-java-LC130" class="blob-code blob-code-inner js-file-line">			display(root<span class="pl-k">.</span>right);</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L131" class="blob-num js-line-number" data-line-number="131"></td>
+        <td id="file-binarysearchtree-java-LC131" class="blob-code blob-code-inner js-file-line">		}</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L132" class="blob-num js-line-number" data-line-number="132"></td>
+        <td id="file-binarysearchtree-java-LC132" class="blob-code blob-code-inner js-file-line">	}</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L133" class="blob-num js-line-number" data-line-number="133"></td>
+        <td id="file-binarysearchtree-java-LC133" class="blob-code blob-code-inner js-file-line">	<span class="pl-k">public</span> <span class="pl-k">static</span> <span class="pl-k">void</span> <span class="pl-en">main</span>(<span class="pl-smi">String</span> <span class="pl-v">arg</span>[]){</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L134" class="blob-num js-line-number" data-line-number="134"></td>
+        <td id="file-binarysearchtree-java-LC134" class="blob-code blob-code-inner js-file-line">		<span class="pl-smi">BinarySearchTree</span> b <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">BinarySearchTree</span>();</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L135" class="blob-num js-line-number" data-line-number="135"></td>
+        <td id="file-binarysearchtree-java-LC135" class="blob-code blob-code-inner js-file-line">		b<span class="pl-k">.</span>insert(<span class="pl-c1">3</span>);b<span class="pl-k">.</span>insert(<span class="pl-c1">8</span>);</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L136" class="blob-num js-line-number" data-line-number="136"></td>
+        <td id="file-binarysearchtree-java-LC136" class="blob-code blob-code-inner js-file-line">		b<span class="pl-k">.</span>insert(<span class="pl-c1">1</span>);b<span class="pl-k">.</span>insert(<span class="pl-c1">4</span>);b<span class="pl-k">.</span>insert(<span class="pl-c1">6</span>);b<span class="pl-k">.</span>insert(<span class="pl-c1">2</span>);b<span class="pl-k">.</span>insert(<span class="pl-c1">10</span>);b<span class="pl-k">.</span>insert(<span class="pl-c1">9</span>);</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L137" class="blob-num js-line-number" data-line-number="137"></td>
+        <td id="file-binarysearchtree-java-LC137" class="blob-code blob-code-inner js-file-line">		b<span class="pl-k">.</span>insert(<span class="pl-c1">20</span>);b<span class="pl-k">.</span>insert(<span class="pl-c1">25</span>);b<span class="pl-k">.</span>insert(<span class="pl-c1">15</span>);b<span class="pl-k">.</span>insert(<span class="pl-c1">16</span>);</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L138" class="blob-num js-line-number" data-line-number="138"></td>
+        <td id="file-binarysearchtree-java-LC138" class="blob-code blob-code-inner js-file-line">		<span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>println(<span class="pl-s"><span class="pl-pds">"</span>Original Tree : <span class="pl-pds">"</span></span>);</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L139" class="blob-num js-line-number" data-line-number="139"></td>
+        <td id="file-binarysearchtree-java-LC139" class="blob-code blob-code-inner js-file-line">		b<span class="pl-k">.</span>display(b<span class="pl-k">.</span>root);		</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L140" class="blob-num js-line-number" data-line-number="140"></td>
+        <td id="file-binarysearchtree-java-LC140" class="blob-code blob-code-inner js-file-line">		<span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>println(<span class="pl-s"><span class="pl-pds">"</span><span class="pl-pds">"</span></span>);</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L141" class="blob-num js-line-number" data-line-number="141"></td>
+        <td id="file-binarysearchtree-java-LC141" class="blob-code blob-code-inner js-file-line">		<span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>println(<span class="pl-s"><span class="pl-pds">"</span>Check whether Node with value 4 exists : <span class="pl-pds">"</span></span> <span class="pl-k">+</span> b<span class="pl-k">.</span>find(<span class="pl-c1">4</span>));</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L142" class="blob-num js-line-number" data-line-number="142"></td>
+        <td id="file-binarysearchtree-java-LC142" class="blob-code blob-code-inner js-file-line">		<span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>println(<span class="pl-s"><span class="pl-pds">"</span>Delete Node with no children (2) : <span class="pl-pds">"</span></span> <span class="pl-k">+</span> b<span class="pl-k">.</span>delete(<span class="pl-c1">2</span>));		</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L143" class="blob-num js-line-number" data-line-number="143"></td>
+        <td id="file-binarysearchtree-java-LC143" class="blob-code blob-code-inner js-file-line">		b<span class="pl-k">.</span>display(root);</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L144" class="blob-num js-line-number" data-line-number="144"></td>
+        <td id="file-binarysearchtree-java-LC144" class="blob-code blob-code-inner js-file-line">		<span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>println(<span class="pl-s"><span class="pl-pds">"</span><span class="pl-cce">\n</span> Delete Node with one child (4) : <span class="pl-pds">"</span></span> <span class="pl-k">+</span> b<span class="pl-k">.</span>delete(<span class="pl-c1">4</span>));		</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L145" class="blob-num js-line-number" data-line-number="145"></td>
+        <td id="file-binarysearchtree-java-LC145" class="blob-code blob-code-inner js-file-line">		b<span class="pl-k">.</span>display(root);</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L146" class="blob-num js-line-number" data-line-number="146"></td>
+        <td id="file-binarysearchtree-java-LC146" class="blob-code blob-code-inner js-file-line">		<span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>println(<span class="pl-s"><span class="pl-pds">"</span><span class="pl-cce">\n</span> Delete Node with Two children (10) : <span class="pl-pds">"</span></span> <span class="pl-k">+</span> b<span class="pl-k">.</span>delete(<span class="pl-c1">10</span>));		</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L147" class="blob-num js-line-number" data-line-number="147"></td>
+        <td id="file-binarysearchtree-java-LC147" class="blob-code blob-code-inner js-file-line">		b<span class="pl-k">.</span>display(root);</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L148" class="blob-num js-line-number" data-line-number="148"></td>
+        <td id="file-binarysearchtree-java-LC148" class="blob-code blob-code-inner js-file-line">	}</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L149" class="blob-num js-line-number" data-line-number="149"></td>
+        <td id="file-binarysearchtree-java-LC149" class="blob-code blob-code-inner js-file-line">}</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L150" class="blob-num js-line-number" data-line-number="150"></td>
+        <td id="file-binarysearchtree-java-LC150" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L151" class="blob-num js-line-number" data-line-number="151"></td>
+        <td id="file-binarysearchtree-java-LC151" class="blob-code blob-code-inner js-file-line"><span class="pl-k">class</span> <span class="pl-en">Node</span>{</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L152" class="blob-num js-line-number" data-line-number="152"></td>
+        <td id="file-binarysearchtree-java-LC152" class="blob-code blob-code-inner js-file-line">	<span class="pl-k">int</span> data;</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L153" class="blob-num js-line-number" data-line-number="153"></td>
+        <td id="file-binarysearchtree-java-LC153" class="blob-code blob-code-inner js-file-line">	<span class="pl-smi">Node</span> left;</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L154" class="blob-num js-line-number" data-line-number="154"></td>
+        <td id="file-binarysearchtree-java-LC154" class="blob-code blob-code-inner js-file-line">	<span class="pl-smi">Node</span> right;	</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L155" class="blob-num js-line-number" data-line-number="155"></td>
+        <td id="file-binarysearchtree-java-LC155" class="blob-code blob-code-inner js-file-line">	<span class="pl-k">public</span> <span class="pl-en">Node</span>(<span class="pl-k">int</span> <span class="pl-v">data</span>){</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L156" class="blob-num js-line-number" data-line-number="156"></td>
+        <td id="file-binarysearchtree-java-LC156" class="blob-code blob-code-inner js-file-line">		<span class="pl-v">this</span><span class="pl-k">.</span>data <span class="pl-k">=</span> data;</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L157" class="blob-num js-line-number" data-line-number="157"></td>
+        <td id="file-binarysearchtree-java-LC157" class="blob-code blob-code-inner js-file-line">		left <span class="pl-k">=</span> <span class="pl-c1">null</span>;</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L158" class="blob-num js-line-number" data-line-number="158"></td>
+        <td id="file-binarysearchtree-java-LC158" class="blob-code blob-code-inner js-file-line">		right <span class="pl-k">=</span> <span class="pl-c1">null</span>;</td>
+      </tr>
+      <tr>
+        <td id="file-binarysearchtree-java-L159" class="blob-num js-line-number" data-line-number="159"></td>
+        <td id="file-binarysearchtree-java-LC159" class="blob-code blob-code-inner js-file-line">	}</td>
+      </tr>
+      <tr class="alt">
+        <td id="file-binarysearchtree-java-L160" class="blob-num js-line-number" data-line-number="160"></td>
+        <td id="file-binarysearchtree-java-LC160" class="blob-code blob-code-inner js-file-line">}</td>
+      </tr>
+</tbody></table>
+
+  </div>
+
+  </div>
+  
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/thmain/449545d18617a670c68f/raw/faf8e150ef457ae08402889d885ae1e537398006/BinarySearchTree.java" style="float:right">view raw</a>
+        <a href="https://gist.github.com/thmain/449545d18617a670c68f#file-binarysearchtree-java">BinarySearchTree.java</a>
+        hosted with <img src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/2764.png" alt="❤" class="emoji" draggable="false"> by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+<p></p>
+<pre><strong>Output:</strong>
+Original Tree :
+1 2 3 4 6 8 9 10 15 16 20 25
+Check whether Node with value 4 exists : true
+Delete Node with no children (2) : true
+1 3 4 6 8 9 10 15 16 20 25
+Delete Node with one child (4) : true
+1 3 6 8 9 10 15 16 20 25
+Delete Node with Two children (10) : true
+1 3 6 8 9 15 16 20 25
+</pre>
+<div id="crp_related" class="crp_related"><h3>Related Posts:</h3><ul><li><a href="http://algorithms.tutorialhorizon.com/avl-tree-insertion/" target="_blank" class="crp_title"><span class="caps">AVL</span> Tree — Insertion</a></li><li><a href="http://algorithms.tutorialhorizon.com/check-if-two-bsts-are-identical/" target="_blank" class="crp_title">Check if Two <span class="caps">BST</span>’s are Identical</a></li><li><a href="http://algorithms.tutorialhorizon.com/binary-min-max-heap/" target="_blank" class="crp_title">Binary Min — Max&nbsp;Heap</a></li><li><a href="http://algorithms.tutorialhorizon.com/inorder-successor-in-binary-search-tree-using-parent-link/" target="_blank" class="crp_title">Inorder Suc­ces­sor in Binary Search Tree Using Par­ent&nbsp;link</a></li><li><a href="http://algorithms.tutorialhorizon.com/inorder-predecessor-and-successor-in-binary-search-tree/" target="_blank" class="crp_title">Inorder Pre­de­ces­sor and Suc­ces­sor in Binary Search Tree</a></li><li><a href="http://algorithms.tutorialhorizon.com/find-the-deepest-left-node-in-a-binary-tree/" target="_blank" class="crp_title">Find the Deep­est Left Node in a Binary Tree.</a></li><li><a href="http://algorithms.tutorialhorizon.com/given-a-binary-tree-print-all-the-nodes-that-dont-have-siblings/" target="_blank" class="crp_title">Given a binary tree, Print All the Nodes that don’t have Siblings.</a></li><li><a href="http://algorithms.tutorialhorizon.com/in-a-binary-tree-check-if-two-nodes-has-the-same-parent-or-are-siblings/" target="_blank" class="crp_title">In a Binary Tree, Check if Two nodes has the same par­ent or are siblings</a></li><li><a href="http://algorithms.tutorialhorizon.com/print-all-the-full-nodes-in-a-binary-tree/" target="_blank" class="crp_title">Print All The Full Nodes in a Binary Tree</a></li><li><a href="http://algorithms.tutorialhorizon.com/inorder-successor-in-binary-tree/" target="_blank" class="crp_title">Inorder Suc­ces­sor in Binary Tree</a></li></ul><div style="clear:both"></div></div><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-linkedin"><a rel="nofollow" class="share-linkedin sd-button share-icon" href="http://algorithms.tutorialhorizon.com/binary-search-tree-complete-implementation/?share=linkedin&amp;nb=1" title="Click to share on LinkedIn" id="sharing-linkedin-232"><span>LinkedIn</span></a></li><li class="share-google-plus-1"><a rel="nofollow" class="share-google-plus-1 sd-button share-icon" href="http://algorithms.tutorialhorizon.com/binary-search-tree-complete-implementation/?share=google-plus-1&amp;nb=1" title="Click to share on Google+" id="sharing-google-232"><span>Google</span></a></li><li class="share-print"><a rel="nofollow" class="share-print sd-button share-icon" href="http://algorithms.tutorialhorizon.com/binary-search-tree-complete-implementation/#print" title="Click to print"><span>Print</span></a></li><li class="share-tumblr"><a rel="nofollow" class="share-tumblr sd-button share-icon" href="http://algorithms.tutorialhorizon.com/binary-search-tree-complete-implementation/?share=tumblr&amp;nb=1" title="Click to share on Tumblr"><span>Tum­blr</span></a></li><li class="share-facebook"><a rel="nofollow" class="share-facebook sd-button share-icon" href="http://algorithms.tutorialhorizon.com/binary-search-tree-complete-implementation/?share=facebook&amp;nb=1" title="Share on Facebook" id="sharing-facebook-232"><span>Face­book<span class="share-count">4</span></span></a></li><li class="share-twitter"><a rel="nofollow" class="share-twitter sd-button share-icon" href="http://algorithms.tutorialhorizon.com/binary-search-tree-complete-implementation/?share=twitter&amp;nb=1" title="Click to share on Twitter" id="sharing-twitter-232"><span>Twit­ter</span></a></li><li class="share-email share-service-visible"><a rel="nofollow" class="share-email sd-button share-icon" href="http://algorithms.tutorialhorizon.com/binary-search-tree-complete-implementation/?share=email&amp;nb=1" title="Click to email this to a friend"><span>Email</span></a></li><li class="share-end"></li></ul></div></div></div>
+<div style="display: block;" id="jp-relatedposts" class="jp-relatedposts">
+	<h3 class="jp-relatedposts-headline"><em>Related</em></h3>
+<div class="jp-relatedposts-items jp-relatedposts-items-minimal"><p class="jp-relatedposts-post jp-relatedposts-post0" data-post-id="673" data-post-format="false"><span class="jp-relatedposts-post-title"><a data-position="0" data-origin="232" rel="nofollow" title="AVL Tree - Insertion
+
+What is AVL Tree : AVL tree is widely known as self-balancing binary search tree. It is named after its creator (Georgy Adelson-Velsky and Landis' tree). In AVL Tree, the&amp;hellip;" href="http://algorithms.tutorialhorizon.com/avl-tree-insertion/" class="jp-relatedposts-post-a">AVL Tree - Insertion</a></span><span class="jp-relatedposts-post-context">In "Binary Tree"</span></p><p class="jp-relatedposts-post jp-relatedposts-post1" data-post-id="301" data-post-format="false"><span class="jp-relatedposts-post-title"><a data-position="1" data-origin="232" rel="nofollow" title="Inorder Successor in Binary Search Tree without Using Parent link
+
+Objective: Given a Binary Search tree, find the inorder successor of a node. What is Inorder Successor: Inorder successor of a node is the next node in the inorder traversal&amp;hellip;" href="http://algorithms.tutorialhorizon.com/inorder-successor-in-binary-search-tree-without-using-parent-link/" class="jp-relatedposts-post-a">Inorder Successor in Binary Search Tree without Using Parent link</a></span><span class="jp-relatedposts-post-context">In "Amazon Questions"</span></p><p class="jp-relatedposts-post jp-relatedposts-post2" data-post-id="1066" data-post-format="false"><span class="jp-relatedposts-post-title"><a data-position="2" data-origin="232" rel="nofollow" title="Diameter Of a Binary Tree
+
+Objective: - Given a binary tree, find the diameter of it. What is Diameter Of a Tree: Diameter of tree is defined as A longest path or route between any&amp;hellip;" href="http://algorithms.tutorialhorizon.com/diameter-of-a-binary-tree/" class="jp-relatedposts-post-a">Diameter Of a Binary Tree</a></span><span class="jp-relatedposts-post-context">In "Amazon Questions"</span></p></div></div>													</div>
+						<div class="clear"></div>				
+					</div><!--/.entry-->
+					
+				</div><!--/.post-inner-->	
+			</article><!--/.post-->				
+				
+		<div class="clear"></div>
+		
+		<p class="post-tags"><span>Tags:</span> <a href="http://algorithms.tutorialhorizon.com/tag/trees/" rel="tag">Trees</a></p>		
+				
+				
+		
+
+<h4 class="heading">
+	<i class="fa fa-hand-o-right"></i>You may also like...</h4>
+
+<ul class="related-posts group">
+	
+		<li class="related post-hover">
+		<article class="post-1095 post type-post status-publish format-standard has-post-thumbnail hentry category-binary-tree category-epic-systems category-intermediate-difficulty-level category-recursion category-top-companies category-trees category-yahoo">
+
+			<div class="post-thumbnail">
+				<a href="http://algorithms.tutorialhorizon.com/find-the-deepest-left-node-in-a-binary-tree/" title="Find the Deepest Left Node in a Binary Tree.">
+											<img src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/g4307-520x245.png" class="attachment-thumb-medium size-thumb-medium wp-post-image" alt="g4307" srcset="http://algorithms.tutorialhorizon.com/files/2015/05/g4307-520x245.png 520w, http://algorithms.tutorialhorizon.com/files/2015/05/g4307-720x340.png 720w" sizes="(max-width: 520px) 100vw, 520px" height="245" width="520">																								</a>
+									<a class="post-comments" href="http://algorithms.tutorialhorizon.com/find-the-deepest-left-node-in-a-binary-tree/#respond"><span data-disqus-identifier="1095 http://algorithms.tutorialhorizon.com/?p=1095"><i class="fa fa-comments-o"></i><span class="dsq-postid" data-dsqidentifier="1095 http://algorithms.tutorialhorizon.com/?p=1095">0</span></span></a>
+							</div><!--/.post-thumbnail-->
+			
+			<div class="related-inner">
+				
+				<h4 class="post-title">
+					<a href="http://algorithms.tutorialhorizon.com/find-the-deepest-left-node-in-a-binary-tree/" rel="bookmark" title="Find the Deepest Left Node in a Binary Tree.">Find the Deepest Left Node in a Binary Tree.</a>
+				</h4><!--/.post-title-->
+				
+				<div class="post-meta group">
+					<p class="post-date">14 Mar, 2015</p>
+				</div><!--/.post-meta-->
+			
+			</div><!--/.related-inner-->
+
+		</article>
+	</li><!--/.related-->
+		<li class="related post-hover">
+		<article class="post-1606 post type-post status-publish format-standard has-post-thumbnail hentry category-beginner-difficulty-level category-binary-tree category-difficulty-level category-recursion category-trees tag-recursion tag-trees">
+
+			<div class="post-thumbnail">
+				<a href="http://algorithms.tutorialhorizon.com/delete-the-binary-tree/" title="Delete the Binary Tree">
+											<img src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/g4307-520x245.png" class="attachment-thumb-medium size-thumb-medium wp-post-image" alt="g4307" srcset="http://algorithms.tutorialhorizon.com/files/2015/05/g4307-520x245.png 520w, http://algorithms.tutorialhorizon.com/files/2015/05/g4307-720x340.png 720w" sizes="(max-width: 520px) 100vw, 520px" height="245" width="520">																								</a>
+									<a class="post-comments" href="http://algorithms.tutorialhorizon.com/delete-the-binary-tree/#respond"><span><i class="fa fa-comments-o"></i><span class="dsq-postid" data-dsqidentifier="1606 http://algorithms.tutorialhorizon.com/?p=1606">0</span></span></a>
+							</div><!--/.post-thumbnail-->
+			
+			<div class="related-inner">
+				
+				<h4 class="post-title">
+					<a href="http://algorithms.tutorialhorizon.com/delete-the-binary-tree/" rel="bookmark" title="Delete the Binary Tree">Delete the Binary Tree</a>
+				</h4><!--/.post-title-->
+				
+				<div class="post-meta group">
+					<p class="post-date">4 Dec, 2015</p>
+				</div><!--/.post-meta-->
+			
+			</div><!--/.related-inner-->
+
+		</article>
+	</li><!--/.related-->
+		<li class="related post-hover">
+		<article class="post-1639 post type-post status-publish format-standard has-post-thumbnail hentry category-amazon-questions category-binary-tree category-difficulty-level category-intermediate-difficulty-level category-microsoft-interview category-recursion category-top-companies category-trees tag-trees">
+
+			<div class="post-thumbnail">
+				<a href="http://algorithms.tutorialhorizon.com/convert-binary-tree-to-its-sum-tree/" title="Convert binary tree to its Sum&nbsp;tree">
+											<img src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/g4307-520x245.png" class="attachment-thumb-medium size-thumb-medium wp-post-image" alt="g4307" srcset="http://algorithms.tutorialhorizon.com/files/2015/05/g4307-520x245.png 520w, http://algorithms.tutorialhorizon.com/files/2015/05/g4307-720x340.png 720w" sizes="(max-width: 520px) 100vw, 520px" height="245" width="520">																								</a>
+									<a class="post-comments" href="http://algorithms.tutorialhorizon.com/convert-binary-tree-to-its-sum-tree/#comments"><span><i class="fa fa-comments-o"></i><span class="dsq-postid" data-dsqidentifier="1639 http://algorithms.tutorialhorizon.com/?p=1639">1</span></span></a>
+							</div><!--/.post-thumbnail-->
+			
+			<div class="related-inner">
+				
+				<h4 class="post-title">
+					<a href="http://algorithms.tutorialhorizon.com/convert-binary-tree-to-its-sum-tree/" rel="bookmark" title="Convert binary tree to its Sum&nbsp;tree">Convert binary tree to its Sum&nbsp;tree</a>
+				</h4><!--/.post-title-->
+				
+				<div class="post-meta group">
+					<p class="post-date">6 Dec, 2015</p>
+				</div><!--/.post-meta-->
+			
+			</div><!--/.related-inner-->
+
+		</article>
+	</li><!--/.related-->
+		
+</ul><!--/.post-related-->
+
+		
+		
+<div id="disqus_thread"><iframe verticalscrolling="no" horizontalscrolling="no" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/a.htm" style="width: 100% ! important; border: medium none ! important; overflow: hidden ! important; height: 697px ! important;" title="Disqus" tabindex="0" scrolling="no" allowtransparency="true" name="dsq-app1" id="dsq-app1" frameborder="0" width="100%"></iframe></div>
+
+		
+	</div><!--/.pad-->
+	
+</section><!--/.content-->
+
+
+	<div class="sidebar s1">
+		
+		<a class="sidebar-toggle" title="Expand Sidebar"><i class="fa icon-sidebar-toggle"></i></a>
+		
+		<div class="sidebar-content">
+			
+						<div class="sidebar-top group">
+				<p>Follow:</p>
+				<ul class="social-links"><li><a rel="nofollow" class="social-tooltip" title="Twitter" href="https://twitter.com/tutorialhorizon" target="Array"><i class="fa fa-twitter-square"></i></a></li><li><a rel="nofollow" class="social-tooltip" title="Facebook" href="https://www.facebook.com/TutorialHorizon" target="Array"><i class="fa fa-facebook-square"></i></a></li></ul>			</div>
+						
+				<ul class="post-nav group">
+		<li class="next"><a href="http://algorithms.tutorialhorizon.com/reverse-the-binary-representation-of-a-number/" rel="next"><i class="fa fa-chevron-right"></i><strong>Next story</strong> <span>Reverse the binary representation of a number.</span></a></li>
+		<li class="previous"><a href="http://algorithms.tutorialhorizon.com/reverse-a-linked-list-part-2/" rel="prev"><i class="fa fa-chevron-left"></i><strong>Previous story</strong> <span>Reverse a Linked List — Part&nbsp;2</span></a></li>
+	</ul>
+			
+						
+			<div id="text-7" class="widget widget_text">			<div class="textwidget"><script async="" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/adsbygoogle.js"></script>
+<!-- Algorithm_sidebar_first300x250 -->
+<ins data-adsbygoogle-status="done" class="adsbygoogle" style="display: inline-block; width: 300px; height: 250px;" data-ad-client="ca-pub-1720129943462898" data-ad-slot="7464352561"><ins id="aswift_2_expand" style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><ins id="aswift_2_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;" frameborder="0" height="250" width="300"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div><div id="search-2" class="widget widget_search"><form method="get" class="searchform themeform" action="http://algorithms.tutorialhorizon.com/">
+	<div>
+		<input class="search" name="s" onblur="if(this.value=='')this.value='To search type and hit enter';" onfocus="if(this.value=='To search type and hit enter')this.value='';" value="To search type and hit enter" type="text">
+	</div>
+</form></div>		<div id="recent-posts-2" class="widget widget_recent_entries">		<h3>Recent Posts</h3>		<ul>
+					<li>
+				<a href="http://algorithms.tutorialhorizon.com/reverse-a-linked-list-in-groups-of-given-size-k/">Reverse a Linked List in groups of given size&nbsp;‘K’</a>
+						</li>
+					<li>
+				<a href="http://algorithms.tutorialhorizon.com/generate-maximum-revenue-by-selling-k-tickets-from-n-windows/">Generate Maximum revenue by selling K tickets from N windows</a>
+						</li>
+					<li>
+				<a href="http://algorithms.tutorialhorizon.com/get-the-sum-of-all-left-leaves-in-a-binary-tree/">Get the Sum of all left leaves in a Binary tree</a>
+						</li>
+					<li>
+				<a href="http://algorithms.tutorialhorizon.com/convert-binary-tree-to-its-sum-tree/">Convert binary tree to its Sum&nbsp;tree</a>
+						</li>
+					<li>
+				<a href="http://algorithms.tutorialhorizon.com/binary-tree-postorder-traversal-non-recursive-approach/">Binary Tree-Postorder Traversal — Non Recursive Approach</a>
+						</li>
+					<li>
+				<a href="http://algorithms.tutorialhorizon.com/binary-tree-preorder-traversal-non-recursive-approach/">Binary Tree — Preorder Traversal — Non Recursive Approach</a>
+						</li>
+					<li>
+				<a href="http://algorithms.tutorialhorizon.com/inorder-traversal-non-recursive-approach/">Binary Tree-Inorder Traversal — Non Recursive Approach</a>
+						</li>
+				</ul>
+		</div>		<div id="text-2" class="widget widget_text">			<div class="textwidget"><script async="" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/adsbygoogle.js"></script>
+<!-- Algorithms_300x250_10June2015 -->
+<ins data-adsbygoogle-status="done" class="adsbygoogle" style="display: inline-block; width: 300px; height: 250px;" data-ad-client="ca-pub-1720129943462898" data-ad-slot="8505292565"><ins id="aswift_3_expand" style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><ins id="aswift_3_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><iframe marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_3" name="aswift_3" style="left:0;position:absolute;top:0;" frameborder="0" height="250" width="300"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div><div id="twitter_timeline-2" class="widget widget_twitter_timeline"><h3>Follow me on Twitter</h3><iframe title="Twitter Timeline" data-user-id="862468009" data-widget-id="608171645690191873" style="position: static; visibility: visible; display: inline-block; width: 100%; height: 452.5px; padding: 0px; border: medium none; max-width: 225px; min-width: 180px; margin-top: 0px; margin-bottom: 0px;" class="twitter-timeline twitter-timeline-rendered" allowfullscreen="true" allowtransparency="true" scrolling="no" id="twitter-widget-0" frameborder="0"></iframe></div><div id="blog_subscription-2" class="widget jetpack_subscription_widget"><h3><label for="subscribe-field">Subscribe for New Posts ( No Spams!!)</label></h3>
+		<form action="#" method="post" accept-charset="utf-8" id="subscribe-blog-blog_subscription-2">
+			<p id="subscribe-text">Enter your email address to subscribe to this blog and receive notifications of new posts by email.</p><p>Join 43 other subscribers</p>
+
+			<p id="subscribe-email"><input name="email" value="Email Address" id="subscribe-field" onclick="if ( this.value == 'Email Address' ) { this.value = ''; }" onblur="if ( this.value == '' ) { this.value = 'Email Address'; }" type="text"></p>
+
+			<p id="subscribe-submit">
+				<input name="action" value="subscribe" type="hidden">
+				<input name="source" value="http://algorithms.tutorialhorizon.com/binary-search-tree-complete-implementation/" type="hidden">
+				<input name="sub-type" value="widget" type="hidden">
+				<input name="redirect_fragment" value="blog_subscription-2" type="hidden">
+								<input value="Subscribe" name="jetpack_subscriptions_widget" type="submit">
+			</p>
+		</form>
+
+		
+</div><div id="top-posts-4" class="widget widget_top-posts"><h3>Top Posts <span class="amp">&amp;</span>&nbsp;Pages</h3><ul><li><a href="http://algorithms.tutorialhorizon.com/binary-search-tree-complete-implementation/" class="bump-view" data-bump-view="tp">Binary Search Tree Complete Implementation.</a></li>
+<li><a href="http://algorithms.tutorialhorizon.com/dynamic-programming-coin-change-problem/" class="bump-view" data-bump-view="tp">Dynamic Programming - Coin Change Problem</a></li>
+<li><a href="http://algorithms.tutorialhorizon.com/backtracking-n-queens-problem/" class="bump-view" data-bump-view="tp">Backtracking - N Queens Problem</a></li>
+<li><a href="http://algorithms.tutorialhorizon.com/binary-min-max-heap/" class="bump-view" data-bump-view="tp">Binary Min - Max Heap</a></li>
+<li><a href="http://algorithms.tutorialhorizon.com/" class="bump-view" data-bump-view="tp">All Articles</a></li>
+<li><a href="http://algorithms.tutorialhorizon.com/dynamic-programming-subset-sum-problem/" class="bump-view" data-bump-view="tp">Dynamic Programming - Subset Sum Problem</a></li>
+<li><a href="http://algorithms.tutorialhorizon.com/introduction-to-backtracking-programming/" class="bump-view" data-bump-view="tp">Introduction To Backtracking Programming</a></li>
+<li><a href="http://algorithms.tutorialhorizon.com/breadth-first-searchtraversal-in-a-binary-tree/" class="bump-view" data-bump-view="tp">Breadth-First Search/Traversal in a Binary Tree</a></li>
+<li><a href="http://algorithms.tutorialhorizon.com/dynamic-programming-longest-common-subsequence/" class="bump-view" data-bump-view="tp">Dynamic Programming - Longest Common Subsequence</a></li>
+<li><a href="http://algorithms.tutorialhorizon.com/dynamic-programming-rod-cutting-problem/" class="bump-view" data-bump-view="tp">Dynamic Programming - Rod Cutting Problem</a></li>
+</ul></div><div id="archives-2" class="widget widget_archive"><h3>Archives</h3>		<ul>
+			<li><a href="http://algorithms.tutorialhorizon.com/2016/01/">January 2016</a>&nbsp;(2)</li>
+	<li><a href="http://algorithms.tutorialhorizon.com/2015/12/">December 2015</a>&nbsp;(7)</li>
+	<li><a href="http://algorithms.tutorialhorizon.com/2015/11/">November 2015</a>&nbsp;(2)</li>
+	<li><a href="http://algorithms.tutorialhorizon.com/2015/08/">August 2015</a>&nbsp;(1)</li>
+	<li><a href="http://algorithms.tutorialhorizon.com/2015/07/">July 2015</a>&nbsp;(2)</li>
+	<li><a href="http://algorithms.tutorialhorizon.com/2015/06/">June 2015</a>&nbsp;(9)</li>
+	<li><a href="http://algorithms.tutorialhorizon.com/2015/05/">May 2015</a>&nbsp;(14)</li>
+	<li><a href="http://algorithms.tutorialhorizon.com/2015/04/">April 2015</a>&nbsp;(1)</li>
+	<li><a href="http://algorithms.tutorialhorizon.com/2015/03/">March 2015</a>&nbsp;(18)</li>
+	<li><a href="http://algorithms.tutorialhorizon.com/2015/02/">February 2015</a>&nbsp;(20)</li>
+	<li><a href="http://algorithms.tutorialhorizon.com/2015/01/">January 2015</a>&nbsp;(9)</li>
+	<li><a href="http://algorithms.tutorialhorizon.com/2014/12/">December 2014</a>&nbsp;(26)</li>
+	<li><a href="http://algorithms.tutorialhorizon.com/2014/11/">November 2014</a>&nbsp;(26)</li>
+	<li><a href="http://algorithms.tutorialhorizon.com/2014/09/">September 2014</a>&nbsp;(28)</li>
+	<li><a href="http://algorithms.tutorialhorizon.com/2014/08/">August 2014</a>&nbsp;(11)</li>
+	<li><a href="http://algorithms.tutorialhorizon.com/2014/07/">July 2014</a>&nbsp;(9)</li>
+		</ul>
+		</div>			
+		</div><!--/.sidebar-content-->
+		
+	</div><!--/.sidebar-->
+
+		
+
+				</div><!--/.main-inner-->
+			</div><!--/.main-->			
+		</div><!--/.container-inner-->
+	</div><!--/.container-->
+
+	<footer id="footer">
+		
+				
+				
+				
+		<section class="container" id="footer-bottom">
+			<div class="container-inner">
+				
+				<a id="back-to-top" href="#"><i class="fa fa-angle-up"></i></a>
+				
+				<div class="pad group">
+					
+					<div class="grid one-half">
+						
+												
+						<div id="copyright">
+															<p>Algorithms © 2016. All Rights Reserved.</p>
+													</div><!--/#copyright-->
+						
+												<div id="credit">
+							<p>Powered by <a href="http://wordpress.org/" rel="nofollow">WordPress</a>. Theme by <a href="http://alxmedia.se/" rel="nofollow">Alx</a>.</p>
+						</div><!--/#credit-->
+												
+					</div>
+					
+					<div class="grid one-half last">	
+						<ul class="social-links"><li><a rel="nofollow" class="social-tooltip" title="Twitter" href="https://twitter.com/tutorialhorizon" target="Array"><i class="fa fa-twitter-square"></i></a></li><li><a rel="nofollow" class="social-tooltip" title="Facebook" href="https://www.facebook.com/TutorialHorizon" target="Array"><i class="fa fa-facebook-square"></i></a></li></ul>					</div>
+				
+				</div><!--/.pad-->
+				
+			</div><!--/.container-inner-->
+		</section><!--/.container-->
+		199 queries in 0.927 seconds.
+	</footer><!--/#footer-->
+
+</div><!--/#wrapper-->
+
+<script>
+	  var windWidth=jQuery( window ).width();
+	  //alert(windWidth);
+	  var animateWidth;
+	  var defaultAnimateWidth;
+	jQuery(document).ready(function()
+  { 
+	animateWidth="55";
+    defaultAnimateWidth= animateWidth-10;
+	animateHeight="49";
+	defaultAnimateHeight= animateHeight-2;jQuery("div#csbwfs-tw a").hover(function(){
+  jQuery("div#csbwfs-tw a").animate({width:animateWidth});
+  },function(){
+    jQuery("div#csbwfs-tw a").stop( true, true ).animate({width:defaultAnimateWidth});
+  });jQuery("div#csbwfs-fb a").hover(function(){
+    jQuery("div#csbwfs-fb a").animate({width:animateWidth});
+  },function(){
+    jQuery("div#csbwfs-fb a").stop( true, true ).animate({width:defaultAnimateWidth});
+  });jQuery("div#csbwfs-ml a").hover(function(){
+    jQuery("div#csbwfs-ml a").animate({width:animateWidth});
+  },function(){
+    jQuery("div#csbwfs-ml a").stop( true, true ).animate({width:defaultAnimateWidth});
+  });jQuery("div#csbwfs-gp a").hover(function(){
+    jQuery("div#csbwfs-gp a").animate({width:animateWidth});
+  },function(){
+    jQuery("div#csbwfs-gp a").stop( true, true ).animate({width:defaultAnimateWidth});
+  });jQuery("div#csbwfs-li a").hover(function(){
+    jQuery("div#csbwfs-li a").animate({width:animateWidth});
+  },function(){
+    jQuery("div#csbwfs-li a").stop( true, true ).animate({width:defaultAnimateWidth});
+  });jQuery("div#csbwfs-re a").hover(function(){
+    jQuery("div#csbwfs-re a").animate({width:animateWidth});
+  },function(){
+    jQuery("div#csbwfs-re a").stop( true, true ).animate({width:defaultAnimateWidth});
+  });jQuery("div.csbwfs-show").hide();
+  jQuery("div.csbwfs-show a").click(function(){
+    jQuery("div#csbwfs-social-inner").show(500);
+     jQuery("div.csbwfs-show").hide(500);
+    jQuery("div.csbwfs-hide").show(500);
+    csbwfsSetCookie("csbwfs_show_hide_status","active","1");
+  });
+  
+  jQuery("div.csbwfs-hide a").click(function(){
+     jQuery("div.csbwfs-show").show(500);
+      jQuery("div.csbwfs-hide").hide(500);
+     jQuery("div#csbwfs-social-inner").hide(500);
+     csbwfsSetCookie("csbwfs_show_hide_status","in_active","1");
+  });var button_status=csbwfsGetCookie("csbwfs_show_hide_status");
+    if (button_status =="in_active") {
+      jQuery("div.csbwfs-show").show();
+      jQuery("div.csbwfs-hide").hide();
+     jQuery("div#csbwfs-social-inner").hide();
+    } else {
+      jQuery("div#csbwfs-social-inner").show();
+     jQuery("div.csbwfs-show").hide();
+    jQuery("div.csbwfs-hide").show();
+    }});
+
+</script><script>csbwfsCheckCookie();function csbwfsSetCookie(cname,cvalue,exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname+"="+cvalue+"; "+expires;
+}
+
+function csbwfsGetCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) != -1) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function csbwfsCheckCookie() {
+    var button_status=csbwfsGetCookie("csbwfs_show_hide_status");
+    if (button_status != "") {
+        
+    } else {
+        csbwfsSetCookie("csbwfs_show_hide_status", "active",1);
+    }
+}
+
+</script>	<div style="display:none">
+	</div>
+                <script type="text/javascript">
+                        !function(d,s,id){
+                                var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+                                if(!d.getElementById(id)){
+                                        js=d.createElement(s);
+                                        js.id=id;js.src=p+"://platform.twitter.com/widgets.js";
+                                        fjs.parentNode.insertBefore(js,fjs);
+                                }
+                        }
+                        (document,"script","twitter-wjs");
+                </script>
+        
+	<script type="text/javascript">
+		WPCOM_sharing_counts = {"http:\/\/algorithms.tutorialhorizon.com\/binary-search-tree-complete-implementation\/":232}	</script>
+		<script type="text/javascript">
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-linkedin' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomlinkedin', 'menubar=1,resizable=1,width=580,height=450' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-google-plus-1' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomgoogle-plus-1', 'menubar=1,resizable=1,width=480,height=550' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-tumblr' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomtumblr', 'menubar=1,resizable=1,width=450,height=450' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-facebook' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-twitter' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+		});
+		</script>
+			<div id="sharing_email" style="display: none;">
+		<form action="/binary-search-tree-complete-implementation/" method="post">
+			<label for="target_email">Send to Email Address</label>
+			<input name="target_email" id="target_email" type="email">
+
+			
+				<label for="source_name">Your Name</label>
+				<input name="source_name" id="source_name" type="text">
+
+				<label for="source_email">Your Email Address</label>
+				<input name="source_email" id="source_email" type="email">
+
+			
+			
+			<img style="float: right; display: none" class="loading" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/loading.gif" alt="loading" height="16" width="16">
+			<input value="Send Email" class="sharing_send" type="submit">
+			<a href="#cancel" class="sharing_cancel">Cancel</a>
+
+			<div class="errors errors-1" style="display: none;">
+				Post was not sent - check your email addresses!			</div>
+
+			<div class="errors errors-2" style="display: none;">
+				Email check failed, please try again			</div>
+
+			<div class="errors errors-3" style="display: none;">
+				Sorry, your blog cannot share posts by email.			</div>
+		</form>
+	</div>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/shCore.js"></script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/shBrushAS3.js"></script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/shBrushBash.js"></script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/shBrushColdFusion.js"></script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/shBrushClojure.js"></script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/shBrushCpp.js"></script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/shBrushCSharp.js"></script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/shBrushCss.js"></script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/shBrushDelphi.js"></script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/shBrushDiff.js"></script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/shBrushErlang.js"></script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/shBrushFSharp.js"></script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/shBrushGroovy.js"></script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/shBrushJava.js"></script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/shBrushJavaFX.js"></script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/shBrushJScript.js"></script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/shBrushLatex.js"></script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/shBrushMatlabKey.js"></script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/shBrushObjC.js"></script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/shBrushPerl.js"></script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/shBrushPhp.js"></script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/shBrushPlain.js"></script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/shBrushPowerShell.js"></script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/shBrushPython.js"></script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/shBrushR.js"></script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/shBrushRuby.js"></script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/shBrushScala.js"></script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/shBrushSql.js"></script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/shBrushVb.js"></script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/shBrushXml.js"></script>
+<script type="text/javascript">
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = 
+"http://algorithms.tutorialhorizon.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.9";
+
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, 
+document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = 
+"http://algorithms.tutorialhorizon.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css?ver=3.0.9";
+
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		
+//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+
+		document.getElementsByTagName("head")[0].insertBefore( themecss, 
+document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t 
+configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+</script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/jquery_006.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var _wpcf7 = 
+{"loaderUrl":"http:\/\/algorithms.tutorialhorizon.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending
+ ...","cached":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/scripts.js"></script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/devicepx-jetpack.js"></script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/gprofiles.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/wpgroho.js"></script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/scripts_002.js"></script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/comment-reply.js"></script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/wp-embed.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var embedVars = 
+{"disqusConfig":{"platform":"wordpress@4.4.1","language":""},"disqusIdentifier":"232
+ 
+http:\/\/algorithms.tutorialhorizon.com\/?p=232","disqusShortname":"algorithmstutorialhorizoncom","disqusTitle":"Binary
+ Search Tree Complete 
+Implementation.","disqusUrl":"http:\/\/algorithms.tutorialhorizon.com\/binary-search-tree-complete-implementation\/","options":{"manualSync":false},"postId":"232"};
+/*
+ ]]> */
+</script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/disqus.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var countVars = {"disqusShortname":"algorithmstutorialhorizoncom"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/count.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var recaptcha_options = {"lang":"en"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/sharing.js"></script>
+<!--[if lt IE 9]>
+<script src="http://algorithms.tutorialhorizon.com/wp-content/themes/hueman/js/ie/respond.js"></script>
+<![endif]-->
+
+	<script src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/e-201601.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	st_go({v:'ext',j:'1:3.1.2',blog:'71558393',post:'232',tz:'-6'});
+	var load_cmc = function(){linktracker_init(71558393,232,2);};
+	if ( typeof addLoadEvent != 'undefined' ) addLoadEvent(load_cmc);
+	else load_cmc();
+	</script><img id="wpstats" src="Binary%20Search%20Tree%20Complete%20Implementation%20in%20JAVA%20_%20Algorithms_files/g.gif">
+
+
+
+
+<div id="fancy_overlay"></div><div id="fancy_loading"><div></div></div><div id="fancy_outer"><div id="fancy_inner"><div id="fancy_close"></div><div id="fancy_bg"><div class="fancy_bg" id="fancy_bg_n"></div><div class="fancy_bg" id="fancy_bg_ne"></div><div class="fancy_bg" id="fancy_bg_e"></div><div class="fancy_bg" id="fancy_bg_se"></div><div class="fancy_bg" id="fancy_bg_s"></div><div class="fancy_bg" id="fancy_bg_sw"></div><div class="fancy_bg" id="fancy_bg_w"></div><div class="fancy_bg" id="fancy_bg_nw"></div></div><a href="javascript:;" id="fancy_left"><span class="fancy_ico" id="fancy_left_ico"></span></a><a href="javascript:;" id="fancy_right"><span class="fancy_ico" id="fancy_right_ico"></span></a><div id="fancy_content"></div></div></div><div id="fancy_title"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="fancy_title" id="fancy_title_left"></td><td class="fancy_title" id="fancy_title_main"><div></div></td><td class="fancy_title" id="fancy_title_right"></td></tr></tbody></table></div></body></html>
+<!-- Dynamic page generated in 0.936 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2016-01-07 23:00:26 -->
+<!-- super cache -->
