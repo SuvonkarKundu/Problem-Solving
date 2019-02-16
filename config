@@ -1,0 +1,13 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[gui]
+	wmstate = normal
+	geometry = 887x427+130+130 171 192
+[remote "origin"]
+	url = https://github.com/SuvonkarKundu/Problem_solving.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
